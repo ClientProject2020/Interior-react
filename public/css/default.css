@@ -1,0 +1,92 @@
+/* *{
+    transition: all 0.6s;
+}
+
+html {
+    height: 100%;
+} */
+
+#error {
+  font-family: "Lato", sans-serif;
+  color: #888;
+  margin: 0;
+}
+
+#error {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  font-size: 50px;
+  display: inline-block;
+  padding-right: 12px;
+  animation: type 0.5s alternate infinite;
+}
+
+@keyframes type {
+  from {
+    box-shadow: inset -3px 0px 0px #888;
+  }
+  to {
+    box-shadow: inset -3px 0px 0px transparent;
+  }
+}
+header {
+  position: relative;
+  width: 100%;
+  z-index: 199 !important;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  
+  background-color: #fff;
+}
+#header .container {
+  position: relative;
+}
+
+#header.header-always-fixed .header-inner,
+#header.header-always-fixed #header-wrap {
+  position: fixed !important;
+  top: 0 !important;
+}
+
+#header .header-inner,
+#header #header-wrap {
+  height: 80px;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#header .header-inner #logo,
+#header #header-wrap #logo {
+  float: left;
+  font-size: 28px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  height: 80px;
+}
+#mainMenu nav {
+  float: right;
+  display: block;
+}
+
+#header .header-inner #logo a, #header .header-inner #logo a span, #header #header-wrap #logo a, #header #header-wrap #logo a span {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    color: #1f1f1f;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
