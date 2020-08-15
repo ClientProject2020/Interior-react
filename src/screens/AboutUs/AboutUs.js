@@ -12,7 +12,7 @@ const AboutUs = () => {
             <div className="col-lg-5 col-md-12 col-sm-12">
               <div className="sec-title">
                 <div className="inner-title">
-                  <div className="title">About Interior</div>
+                  <div className="title">Atul Interior</div>
                   <h2>
                     We are passionate and always produce better results for
                     interiors.
