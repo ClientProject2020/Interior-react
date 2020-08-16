@@ -10,6 +10,10 @@ html { overflow-x: hidden;
 a.active{
   color: #e6c663 !important;
 }
+
+span{
+  font-family: 'Montserrat', sans-serif;
+}
 body .body-inner, body #wrapper { padding: 0; margin: 0; }
 body .container-wide { width: 100%; margin: 0 auto; padding: 0 60px; }
 
