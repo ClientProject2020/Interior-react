@@ -45,8 +45,20 @@ const Blog = () => {
       <div className="container">
         <div className="row" style={{ display: "block" }}>
           {/* <!-- Section Title --> */}
+
+          <span
+            className="section-title"
+            style={{
+              display: "flex",
+              marginBottom: 0,
+              textAlign: "center",
+              justifyContent: "center",
+              color:'#e6c663'
+            }}
+          >
+            Blog
+          </span>
           <div className="section-title">
-            <span>Blog</span>
             <h3>Latest news</h3>
           </div>
           {/* <!-- Carousel --> */}

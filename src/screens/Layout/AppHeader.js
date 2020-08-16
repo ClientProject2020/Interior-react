@@ -48,6 +48,7 @@ const AppHeader = () => {
                         className={`${navOpen === "home" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("home");
+                          setMenuOpen(false);
                         }}
                       >
                         Home
@@ -57,7 +58,10 @@ const AppHeader = () => {
                       <Link
                         to="/aboutUs"
                         className={`${navOpen === "about" ? "active" : ""}`}
-                        onClick={() => setNavOpen("about")}
+                        onClick={() => {
+                          setNavOpen("about");
+                          setMenuOpen(false);
+                        }}
                       >
                         About Us
                       </Link>
@@ -66,16 +70,22 @@ const AppHeader = () => {
                       <Link
                         to="/service"
                         className={`${navOpen === "service" ? "active" : ""}`}
-                        onClick={() => setNavOpen("service")}
+                        onClick={() => {
+                          setNavOpen("service");
+                          setMenuOpen(false);
+                        }}
                       >
                         Services
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to="/contact"
+                        to="/portfolio"
                         className={`${navOpen === "portfolio" ? "active" : ""}`}
-                        onClick={() => setNavOpen("portfolio")}
+                        onClick={() => {
+                          setNavOpen("portfolio");
+                          setMenuOpen(false);
+                        }}
                       >
                         Portfolio
                       </Link>
@@ -84,7 +94,10 @@ const AppHeader = () => {
                       <Link
                         to="/"
                         className={`${navOpen === "ideaBook" ? "active" : ""}`}
-                        onClick={() => setNavOpen("ideaBook")}
+                        onClick={() => {
+                          setNavOpen("ideaBook");
+                          setMenuOpen(false);
+                        }}
                       >
                         Idea Book
                       </Link>
@@ -93,7 +106,10 @@ const AppHeader = () => {
                       <Link
                         to="/blog"
                         className={`${navOpen === "blog" ? "active" : ""}`}
-                        onClick={() => setNavOpen("blog")}
+                        onClick={() => {
+                          setNavOpen("blog");
+                          setMenuOpen(false);
+                        }}
                       >
                         Blog
                       </Link>
@@ -102,7 +118,10 @@ const AppHeader = () => {
                       <Link
                         to="/"
                         className={`${navOpen === "carrer" ? "active" : ""}`}
-                        onClick={() => setNavOpen("carrer")}
+                        onClick={() => {
+                          setNavOpen("carrer");
+                          setMenuOpen(false);
+                        }}
                       >
                         Carrers
                       </Link>
@@ -111,7 +130,10 @@ const AppHeader = () => {
                       <Link
                         to="/contact"
                         className={`${navOpen === "contact" ? "active" : ""}`}
-                        onClick={() => setNavOpen("contact")}
+                        onClick={() => {
+                          setNavOpen("contact");
+                          setMenuOpen(false);
+                        }}
                       >
                         Contact Us
                       </Link>

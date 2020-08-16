@@ -19,6 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 import AboutUs from "./screens/AboutUs/AboutUs";
 import ServiceScreen from "./screens/Services/ServiceScreen";
 import BlogsScreen from "./screens/Blogs/Blogs";
+import PortfolioScreen from "./screens/Portfolio/PortfolioScreen";
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
               <Route
                 path={`${process.env.PUBLIC_URL}/blog`}
                 component={BlogsScreen}
+              />
+              <Route
+                path={`${process.env.PUBLIC_URL}/portfolio`}
+                component={PortfolioScreen}
               />
             </MainScreen>
           </Fragment>

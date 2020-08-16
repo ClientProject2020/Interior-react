@@ -89,7 +89,7 @@ const ServiceScreen = () => {
                   lineHeight: "34px",
                 }}
               >
-                Solar Systems
+                Services
               </h1>
             </div>
             <div class="col-md-6">
@@ -107,7 +107,7 @@ const ServiceScreen = () => {
         </div>
       </div>
       <section class="single-service">
-        <div class="container">
+        <div class="service container">
           <div class="row">
             <div class="col-md-3">
               <div class="sidebar" style={{ padding: 0 }}>
@@ -195,8 +195,48 @@ const ServiceScreen = () => {
                             </div>
                           </Accordion.Collapse>
                         </div>
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="1"
+                          >
+                            Interior Renovation
+                          </ContextAwareToggle>
+                        </div>
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="2"
+                          >
+                            Design and Build
+                          </ContextAwareToggle>
+                        </div>
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="3"
+                          >
+                            Tiling and Painting
+                          </ContextAwareToggle>
+                        </div>
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="4"
+                          >
+                            Paver Walkways
+                          </ContextAwareToggle>
+                        </div>
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="5"
+                          >
+                            Household Repair
+                          </ContextAwareToggle>
+                        </div>
                       </Accordion>
-                      <ul>
+                      {/* <ul>
                         <li>
                           <a
                             href="service_interior_renovation.html"
@@ -251,7 +291,7 @@ const ServiceScreen = () => {
                             <Icon icon={ic_keyboard_arrow_right} />
                           </a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </div>
                 </div>

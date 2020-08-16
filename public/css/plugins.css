@@ -144,7 +144,7 @@ sup {
 }
 
 a {
-    color: #e6c663;
+    color: #000 !important;
     text-decoration: none;
     background-color: transparent
 }
