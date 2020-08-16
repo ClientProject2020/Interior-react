@@ -21,7 +21,12 @@ import AppLoader from "./screens/Layout/AppLoader";
 // import ServiceScreen from "./screens/Services/ServiceScreen";
 // import BlogsScreen from "./screens/Blogs/Blogs";
 
-const HomeScreen = React.lazy(() => import("./screens/HomeScreen/HomeScreen"));
+const HomeScreen = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./screens/HomeScreen/HomeScreen")), 2600);
+  });
+});
+
 const AboutUs = React.lazy(() => import("./screens/AboutUs/AboutUs"));
 const ContactUs = React.lazy(() => import("./screens/ContactUs/ContactUs"));
 const BlogsScreen = React.lazy(() => import("./screens/Blogs/Blogs"));

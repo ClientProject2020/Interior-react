@@ -1,6 +1,7 @@
 import React from "react";
 
 const AppLoader = () => {
+  
   return (
     <div className="page-loading">
       <div className="thecube">

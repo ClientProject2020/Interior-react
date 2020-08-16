@@ -12,7 +12,7 @@ import { plane } from "react-icons-kit/entypo/plane";
 const ContactUs = () => {
   return (
     <>
-      <div
+      {/* <div
         className="contact-bg"
         style={{
           display: "flex",
@@ -33,9 +33,39 @@ const ContactUs = () => {
         >
           Contact Us
         </div>
+      </div> */}
+      <div class="page-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1
+                style={{
+                  fontSize: 22,
+                  fontFamily: `'Montserrat',sans-serif`,
+                  fontWeight: "650",
+                  marginBottom: 0,
+                  lineHeight: "34px",
+                }}
+              >
+                Contact Us
+              </h1>
+            </div>
+            <div class="col-md-6">
+              <ul class="bread-crumb">
+                <li>
+                  <a title="HOME" href="#">
+                    Contact Us
+                  </a>
+                </li>
+                <li class="separate">/</li>
+                <li>Lorem Ipsum </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <section className="page-content">
-        <div className="" style={{ padding: "0px 15px" }}>
+        <div className="" style={{ padding: "0px 55px" }}>
           <div className="contact-page">
             <div className="contact-head">
               <p>
@@ -44,8 +74,8 @@ const ContactUs = () => {
               </p>
             </div>
             <div className="contact-main">
-              <div className="row" style={{ padding: "0px 15px" }}>
-                <div className="col-lg-5">
+              <div className="row" style={{ padding: "0px 0px" }}>
+                {/* <div className="col-lg-5">
                   <div className="contact_info">
                     <h3 className="sub-title white">Contacts</h3>
                     <ul className="cl-list">
@@ -122,12 +152,20 @@ const ContactUs = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
-                <div className="col-lg-7">
+                </div> */}
+                <div className="col-lg-12">
                   <div className="contact-main-form">
                     <form method="post" action="#" id="contact-form">
                       <div className="response"></div>
                       <div className="row">
+                        <div
+                          className="col-sm-12"
+                          style={{ margin: "7px 0px" }}
+                        >
+                          <h3>
+                            Please fill in the form to get in touch with us:
+                          </h3>
+                        </div>
                         <div className="col-sm-6">
                           <div className="form-group">
                             <label>Name</label>
@@ -157,10 +195,10 @@ const ContactUs = () => {
                               }}
                               className="form-control"
                             >
-                              <option>Los Angeles</option>
-                              <option>Los Angeles</option>
-                              <option>Los Angeles</option>
-                              <option>Los Angeles</option>
+                              <option>India</option>
+                              <option>Nepal</option>
+                              <option>Banladesh</option>
+                              <option>America</option>
                             </select>
                           </div>
                         </div>
@@ -194,7 +232,7 @@ const ContactUs = () => {
                               type="text"
                               name="name"
                               className="form-control"
-                              placeholder="44 20 7700 0055"
+                              placeholder="+91 20 7700 0055"
                             />
                           </div>
                         </div>

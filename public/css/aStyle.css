@@ -825,7 +825,7 @@ img {
 }
 
 .page-content {
-  padding: 0px 0 175px;
+  padding: 0px 0 50px;
 }
 
 .contact-page {
@@ -837,7 +837,7 @@ img {
   vertical-align: baseline;
 }
 .contact-head {
-  padding: 48px 0 51px;
+  padding: 35px 0 20px;
 }
 .contact-head p {
   color: #24262e;
@@ -848,7 +848,7 @@ img {
   padding: 20px 20px;
   border-radius: 10px 0 0 10px;
   height: 100%;
-  background-color: #debf83;
+  background-color: #e8a013;
 }
 .sub-title.white {
   color: #fff;
@@ -993,15 +993,15 @@ img {
   border-radius: 100%;
 }
 .contact-bg {
-  background-image: url(../image/01.jpg);
-  height: calc(100vh - 60vh);
+  background-image: url(../image/contact-us1.jpg);
+  height: calc(50vh);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
   background-position: center;
   position: relative;
   /* To remove parallax effect  background attachment */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 @media (max-width: 991px) {
   .contact_info {
