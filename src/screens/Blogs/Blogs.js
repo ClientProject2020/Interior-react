@@ -72,19 +72,6 @@ const Blogs = () => {
                           sed do eiusmod tempor incididunt ut.
                         </p>
                       </div>
-                      <div class="news-item-bottom">
-                        <a
-                          onClick={() => {
-                            setOnDetailSelect();
-                          }}
-                          class="news-link"
-                        >
-                          Read more...
-                        </a>
-                        <div class="admin">
-                          <p>By, Lisa Jhonson</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

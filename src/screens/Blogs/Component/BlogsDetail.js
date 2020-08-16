@@ -8,42 +8,42 @@ import { share } from "react-icons-kit/fa/share";
 
 const BlogsDetail = () => {
   return (
-    <section class="blog blog-section bg-white list-side">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 blog-pots">
-            <div class="row">
-              <div class="col-md-12 col-xs-12">
-                <div class="news-item details no-mb2">
-                  <a href="blog-details.html" class="news-img-link">
-                    <div class="news-item-img">
+    <section className="blog blog-section bg-white list-side">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 col-md-12 blog-pots">
+            <div className="row">
+              <div className="col-md-12 col-xs-12">
+                <div className="news-item details no-mb2">
+                  <a className="news-img-link">
+                    <div className="news-item-img">
                       <img
-                        class="img-responsive"
+                        className="img-responsive"
                         src={aboutus}
                         alt="blog image"
                       />
                     </div>
                   </a>
-                  <div class="news-item-text details pb-0">
-                    <a href="blog-details.html">
+                  <div className="news-item-text details pb-0">
+                    <a>
                       <h3>Interior Design News</h3>
                     </a>
-                    <div class="dates">
-                      <span class="date">April 11, 2020 &nbsp;</span>
-                      {/* <ul class="action-list pl-0">
-                          <li class="action-item pl-2">
+                    <div className="dates">
+                      <span className="date">April 11, 2020 &nbsp;</span>
+                      {/* <ul className="action-list pl-0">
+                          <li className="action-item pl-2">
                             <Icon icon={heart} style={{}} /> <span>306</span>
                           </li>
-                          <li class="action-item">
+                          <li className="action-item">
                             <Icon icon={comment} /> <span>34</span>
                           </li>
-                          <li class="action-item">
+                          <li className="action-item">
                             <Icon icon={share} /> <span>122</span>
                           </li>
                         </ul> */}
                     </div>
-                    <div class="news-item-descr big-news details visib mb-0">
-                      <p class="mb-3">
+                    <div className="news-item-descr big-news details visib mb-0">
+                      <p className="mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Autem, ea? Vitae pariatur ab amet iusto tempore
                         neque a, deserunt eaque recusandae obcaecati eos atque
@@ -69,21 +69,21 @@ const BlogsDetail = () => {
                 </div>
               </div>
             </div>
-            <section class="comments">
-              <h3 class="mb-5">5 Comments</h3>
-              <div class="row mb-4">
-                <ul class="col-12 commented">
-                  <li class="comm-inf">
-                    <div class="col-md-2">
+            <section className="comments">
+              <h3 className="mb-5">5 Comments</h3>
+              <div className="row mb-4">
+                <ul className="col-12 commented">
+                  <li className="comm-inf">
+                    <div className="col-md-2">
                       <img
                         src="images/testimonials/ts-4.jpg"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="col-md-10 comments-info">
-                      <h5 class="mb-1">Mario Smith</h5>
-                      <p class="mb-4">Jun 23, 2020</p>
+                    <div className="col-md-10 comments-info">
+                      <h5 className="mb-1">Mario Smith</h5>
+                      <p className="mb-4">Jun 23, 2020</p>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Cras aliquam, quam congue dictum luctus, lacus magna
@@ -95,19 +95,19 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div class="row ml-5">
-                <ul class="col-12 commented">
-                  <li class="comm-inf">
-                    <div class="col-md-2">
+              <div className="row ml-5">
+                <ul className="col-12 commented">
+                  <li className="comm-inf">
+                    <div className="col-md-2">
                       <img
                         src="images/testimonials/ts-5.jpg"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="col-md-10 comments-info">
-                      <h5 class="mb-1">Mary Tyron</h5>
-                      <p class="mb-4">Jun 23, 2020</p>
+                    <div className="col-md-10 comments-info">
+                      <h5 className="mb-1">Mary Tyron</h5>
+                      <p className="mb-4">Jun 23, 2020</p>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Cras aliquam, quam congue dictum luctus, lacus magna
@@ -119,19 +119,19 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div class="row my-4">
-                <ul class="col-12 commented">
-                  <li class="comm-inf">
-                    <div class="col-md-2">
+              <div className="row my-4">
+                <ul className="col-12 commented">
+                  <li className="comm-inf">
+                    <div className="col-md-2">
                       <img
                         src="images/testimonials/ts-6.jpg"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="col-md-10 comments-info no-mb">
-                      <h5 class="mb-1">Leo Williams</h5>
-                      <p class="mb-4">Jun 23, 2020</p>
+                    <div className="col-md-10 comments-info no-mb">
+                      <h5 className="mb-1">Leo Williams</h5>
+                      <p className="mb-4">Jun 23, 2020</p>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Cras aliquam, quam congue dictum luctus, lacus magna
@@ -144,54 +144,54 @@ const BlogsDetail = () => {
                 </ul>
               </div>
             </section>
-            {/* <section class="leve-comments wpb">
-              <h3 class="mb-5">Leave a Comment</h3>
-              <div class="row">
-                <div class="col-md-12 data">
+            {/* <section className="leve-comments wpb">
+              <h3 className="mb-5">Leave a Comment</h3>
+              <div className="row">
+                <div className="col-md-12 data">
                   <form action="#">
-                    <div class="col-md-12">
-                      <div class="form-group">
+                    <div className="col-md-12">
+                      <div className="form-group">
                         <input
                           type="text"
                           name="name"
-                          class="form-control"
+                          className="form-control"
                           placeholder="First Name"
                           required
                         />
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
+                    <div className="col-md-12">
+                      <div className="form-group">
                         <input
                           type="text"
                           name="name"
-                          class="form-control"
+                          className="form-control"
                           placeholder="Last Name"
                           required
                         />
                       </div>
                     </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
+                    <div className="col-md-12">
+                      <div className="form-group">
                         <input
                           type="email"
                           name="email"
-                          class="form-control"
+                          className="form-control"
                           placeholder="Email"
                           required
                         />
                       </div>
                     </div>
-                    <div class="col-md-12 form-group">
+                    <div className="col-md-12 form-group">
                       <textarea
-                        class="form-control"
+                        className="form-control"
                         id="exampleTextarea"
                         rows="8"
                         placeholder="Message"
                         required
                       ></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg mt-2">
+                    <button type="submit" className="btn btn-primary btn-lg mt-2">
                       Submit Comment
                     </button>
                   </form>
