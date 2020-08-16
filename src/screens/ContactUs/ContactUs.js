@@ -4,9 +4,9 @@ import contactus from "../../assets/images/contact-us.jpg";
 import Submit from "../../assets/icons/submit.png";
 import { ic_location_on } from "react-icons-kit/md/ic_location_on";
 import { Icon } from "react-icons-kit";
-import { clockO } from "react-icons-kit/fa/clockO";
-import { mail } from "react-icons-kit/entypo/mail";
-import { phone } from "react-icons-kit/entypo/phone";
+import { clock } from "react-icons-kit/ionicons/clock";
+import { email } from "react-icons-kit/ionicons/email";
+import { iosTelephone } from "react-icons-kit/ionicons/iosTelephone";
 import { plane } from "react-icons-kit/entypo/plane";
 
 const ContactUs = () => {
@@ -21,7 +21,6 @@ const ContactUs = () => {
           paddingBottom: 85,
         }}
       >
-        {" "}
         <div
           style={{
             color: "white",
@@ -36,7 +35,7 @@ const ContactUs = () => {
         </div>
       </div>
       <section className="page-content">
-        <div className="container">
+        <div className="" style={{ padding: "0px 15px" }}>
           <div className="contact-page">
             <div className="contact-head">
               <p>
@@ -45,7 +44,7 @@ const ContactUs = () => {
               </p>
             </div>
             <div className="contact-main">
-              <div className="row">
+              <div className="row" style={{ padding: "0px 15px" }}>
                 <div className="col-lg-5">
                   <div className="contact_info">
                     <h3 className="sub-title white">Contacts</h3>
@@ -55,7 +54,7 @@ const ContactUs = () => {
                           <div style={{ color: "white" }}>
                             <Icon
                               icon={ic_location_on}
-                              size={30}
+                              size={25}
                               style={{
                                 verticalAlign: "middle",
                                 height: "auto",
@@ -73,8 +72,8 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={clockO}
-                              size={30}
+                              icon={clock}
+                              size={25}
                               style={{
                                 verticalAlign: "middle",
                                 height: "auto",
@@ -93,8 +92,8 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={mail}
-                              size={30}
+                              icon={email}
+                              size={25}
                               style={{
                                 verticalAlign: "middle",
                                 height: "auto",
@@ -109,8 +108,8 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={phone}
-                              size={30}
+                              icon={iosTelephone}
+                              size={25}
                               style={{
                                 verticalAlign: "middle",
                                 height: "auto",

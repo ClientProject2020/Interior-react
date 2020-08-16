@@ -845,7 +845,7 @@ img {
   line-height: 32px;
 }
 .contact_info {
-  padding: 67px 20px;
+  padding: 20px 20px;
   border-radius: 10px 0 0 10px;
   height: 100%;
   background-color: #debf83;
@@ -855,8 +855,9 @@ img {
   padding-left: 0;
   margin-top: 0;
   margin: 0;
-  padding-bottom: 27px;
-  margin-bottom: 49px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-family: "Didact Gothic";
 }
 .sub-title {
   color: #070c1f;
@@ -887,14 +888,14 @@ img {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-ul {
+.cl-list {
   display: block;
   list-style-type: disc;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: 15px;
 }
 .cl-list li {
   display: flex;
@@ -908,9 +909,9 @@ ul {
 }
 
 .para {
-  color: #423b2e;
-  font-size: 16px;
-  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 22px;
   max-width: 80%;
   padding-left: 20px;
@@ -921,7 +922,7 @@ ul {
 }
 .contact-main-form {
   background-color: #f5f5f5;
-  padding: 86px 80px 50px;
+  padding: 20px 80px 20px;
   border-radius: 0 10px 10px 0;
   height: 100%;
 }
@@ -1001,4 +1002,12 @@ ul {
   position: relative;
   /* To remove parallax effect  background attachment */
   background-attachment: fixed;
+}
+@media (max-width: 991px) {
+  .contact_info {
+    border-radius: 0px !important;
+  }
+}
+.readmore-button:hover{
+  color: #e9c37a !important;
 }

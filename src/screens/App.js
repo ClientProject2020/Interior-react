@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import AppHeader from "./Layout/AppHeader";
 import AppFooter from "./Layout/AppFooter";
+import AppLoader from "./Layout/AppLoader";
 
 const App = (props) => {
   const dispatch = useDispatch();

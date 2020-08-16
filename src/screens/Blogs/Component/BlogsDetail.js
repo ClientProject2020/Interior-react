@@ -42,7 +42,7 @@ const BlogsDetail = () => {
                           </li>
                         </ul> */}
                     </div>
-                    <div className="news-item-descr big-news details visib mb-0">
+                    <div className=" big-news details visib mb-0">
                       <p className="mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Autem, ea? Vitae pariatur ab amet iusto tempore
@@ -69,9 +69,12 @@ const BlogsDetail = () => {
                 </div>
               </div>
             </div>
-            <section className="comments">
+            <section className="comments" style={{ paddingTop: 20 }}>
               <h3 className="mb-5">5 Comments</h3>
-              <div className="row mb-4">
+              <div
+                className="row mb-4"
+                style={{ borderBottom: " 1px solid #ececec" }}
+              >
                 <ul className="col-12 commented">
                   <li className="comm-inf">
                     <div className="col-md-2">
@@ -95,7 +98,7 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div className="row ml-5">
+              <div className="row mb-5" style={{ borderBottom: " 1px solid #ececec" }}>
                 <ul className="col-12 commented">
                   <li className="comm-inf">
                     <div className="col-md-2">
@@ -119,7 +122,7 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div className="row my-4">
+              <div className="row my-4" style={{ borderBottom: " 1px solid #ececec" }}>
                 <ul className="col-12 commented">
                   <li className="comm-inf">
                     <div className="col-md-2">

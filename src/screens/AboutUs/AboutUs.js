@@ -55,7 +55,7 @@ const AboutUs = () => {
               }}
             >
               <div className="image">
-                <a href="service-interior.html">
+                <a href="#">
                   <img src={aboutus} alt="" />
                 </a>
               </div>
@@ -109,13 +109,13 @@ const AboutUs = () => {
               }}
             >
               <div className="image">
-                <a href="service-interior.html">
+                <a href="#">
                   <img src={aboutus} alt="" />
                 </a>
               </div>
               <div className="lower-box">
                 <h3>
-                  <a href="service-interior.html">With Signature Style</a>
+                  <a href="#">With Signature Style</a>
                 </h3>
                 <div className="text">Some content here</div>
               </div>
