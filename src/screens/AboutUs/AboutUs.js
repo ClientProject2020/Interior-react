@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <section className="about-section">
       <div className="auto-container">
-        <h1 className="big-title">About Interior</h1>
+        <h1 className="big-title">Interior</h1>
         <div className="title-box">
           <div className="row clearfix">
             <div className="col-lg-5 col-md-12 col-sm-12">

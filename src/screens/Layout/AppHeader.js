@@ -91,7 +91,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/contact"
+                        to="/blog"
                         className={`${navOpen === "blog" ? "active" : ""}`}
                         onClick={() => setNavOpen("blog")}
                       >
