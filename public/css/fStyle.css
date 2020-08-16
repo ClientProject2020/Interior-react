@@ -847,7 +847,7 @@ section.secondary {
 }
 .services-wrapp h4 {
   font-weight: 650;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .services-wrapp p {
   font-family: "PT Sans";
@@ -867,7 +867,7 @@ section.secondary {
 
 .services-wrapp h4 {
   font-weight: 650;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .services-wrapp .services-post img {
@@ -888,7 +888,8 @@ dl {
 dt {
   font-weight: bold;
 }
-dt, dd {
+dt,
+dd {
   line-height: 1.42857143;
 }
 .accordion > dt > a.active {
@@ -903,7 +904,7 @@ dt, dd {
   color: #777;
   text-decoration: none;
   padding: 14px 20px;
-  border: 1px solid #E2E6E7;
+  border: 1px solid #e2e6e7;
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 600;
@@ -915,7 +916,8 @@ dt, dd {
   -mozkittransition-timing-function: ease;
 }
 
-.accordion > dt > a.active:after, .accordion > dt > a.active:hover:after {
+.accordion > dt > a.active:after,
+.accordion > dt > a.active:hover:after {
   content: "\e6ea";
   color: #111;
 }
@@ -928,7 +930,7 @@ dt, dd {
   position: absolute;
   top: 50%;
   right: 10px;
-  font-family: 'font-awesome';
+  font-family: "font-awesome";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -939,11 +941,11 @@ dt, dd {
   text-align: center;
   color: #999;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .accordion > dd {
@@ -952,10 +954,69 @@ dt, dd {
   font-size: 15px;
   font-weight: 400;
   line-height: 25px;
-  color: rgba(35,37,40,.7);
+  color: rgba(35, 37, 40, 0.7);
   font-family: "PT Sans";
+  font-size: 14px;
 }
-
+.accordion-content {
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  color: rgba(35, 37, 40, 0.7);
+  font-family: "PT Sans";
+  font-size: 14px;
+}
 dd {
   margin-left: 0;
+}
+.bootstrap-accordian-style .accordian-header {
+  display: block;
+  position: relative;
+  padding: 14px 20px;
+  border: 1px solid #e2e6e7;
+  text-transform: capitalize;
+  transition: padding-left 300ms, padding-right 300ms;
+  -webkit-transition: padding-left 300ms, padding-right 300ms;
+  -moz-transition: padding-left 300ms, padding-right 300ms;
+  transition-timing-function: ease;
+  -webkittransition-timing-function: ease;
+  -mozkittransition-timing-function: ease;
+}
+.accordian-header-title {
+  color: #777;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.accordian-header:hover {
+  padding-left: 35px !important;
+}
+.accordian-header:hover.active .accordian-arrow,
+.accordian-header.active .accordian-arrow {
+  transform: rotate(90deg) !important;
+}
+.bootstrap-accordian-style {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.accordian-sidebar .accordian-header {
+  display: block;
+  padding: 15px 20px 15px 0;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 0;
+  transition: padding-left 300ms, padding-right 300ms;
+  -webkit-transition: padding-left 300ms, padding-right 300ms;
+  -moz-transition: padding-left 300ms, padding-right 300ms;
+  transition-timing-function: ease;
+  -webkittransition-timing-function: ease;
+  -mozkittransition-timing-function: ease;
+}
+.accordian-header-title:hover{
+  color: #e6c663 !important;
 }

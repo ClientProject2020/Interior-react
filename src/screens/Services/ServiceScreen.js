@@ -1,13 +1,19 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
+import { ic_keyboard_arrow_down } from "react-icons-kit/md/ic_keyboard_arrow_down";
 import { filePdfO } from "react-icons-kit/fa/filePdfO";
-import { Accordion, Card, useAccordionToggle,AccordionContext } from "react-bootstrap";
+import {
+  Accordion,
+  Card,
+  useAccordionToggle,
+  AccordionContext,
+} from "react-bootstrap";
 
 const ServiceScreen = () => {
   const [selectedAccordion, setSelectedAccordion] = useState(1);
 
-  const ContextAwareToggle = ({ children, eventKey, callback }) => {
+  const ContextAwareToggle = ({ children, eventKey, callback, type }) => {
     const currentEventKey = useContext(AccordionContext);
 
     const decoratedOnClick = useAccordionToggle(
@@ -18,13 +24,53 @@ const ServiceScreen = () => {
     const isCurrentEventKey = currentEventKey === eventKey;
 
     return (
-      <button
-        type="button"
-        style={{ backgroundColor: isCurrentEventKey ? "pink" : "lavender" }}
-        onClick={decoratedOnClick}
-      >
-        {children}
-      </button>
+      <>
+        {type === "accordion-question" ? (
+          <div
+            style={{
+              display: "flex",
+              cursor: "pointer",
+            }}
+            className={`accordian-header ${isCurrentEventKey ? "active" : ""}`}
+            onClick={decoratedOnClick}
+          >
+            <div
+              className="accordian-header-title"
+              style={{ flex: 1, color: isCurrentEventKey ? "#e6c663" : "#777" }}
+            >
+              {children}
+            </div>
+            <div className="accordian-arrow">
+              <Icon icon={ic_keyboard_arrow_right} />
+            </div>
+          </div>
+        ) : (
+          <div
+            className="accordian-header"
+            style={{
+              display: "flex",
+              cursor: "pointer",
+            }}
+            onClick={decoratedOnClick}
+          >
+            <div
+              className="accordian-header-title"
+              style={{
+                flex: 1,
+                color: isCurrentEventKey ? "#e6c663" : "#727272",
+                fontSize: 13,
+                fontFamily: `'Montserrat',sans-serif`,
+                textTransform: "uppercase",
+              }}
+            >
+              {children}
+            </div>
+            <div className="accordian-arrow" style={{ color: "#aaa" }}>
+              <Icon icon={ic_keyboard_arrow_right} />
+            </div>
+          </div>
+        )}
+      </>
     );
   };
 
@@ -68,6 +114,88 @@ const ServiceScreen = () => {
                 <div id="text-3" class="widget widget_text">
                   <div class="textwidget">
                     <div class="widget vertical-menu">
+                      <Accordion defaultActiveKey="">
+                        <div className="accordian-sidebar">
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="0"
+                          >
+                            Residential
+                          </ContextAwareToggle>
+                          <Accordion.Collapse eventKey="0">
+                            <div
+                              className="accordion-content"
+                              style={{
+                                background: "transparent",
+                                padding: "2px 15px",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: "flex",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    color: "#aaa",
+                                    padding: " 15px 20px 15px 0",
+                                  }}
+                                >
+                                  <Icon icon={ic_keyboard_arrow_right} />
+                                </div>
+                                <div
+                                  className="accordian-header"
+                                  style={{
+                                    display: "flex",
+                                    cursor: "pointer",
+                                  }}
+                                >
+                                  <div
+                                    className="accordian-header-title"
+                                    style={{
+                                      flex: 1,
+                                      color: "#777",
+                                    }}
+                                  >
+                                    Mumbai
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                style={{
+                                  display: "flex",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    color: "#aaa",
+                                    padding: " 15px 20px 15px 0",
+                                  }}
+                                >
+                                  <Icon icon={ic_keyboard_arrow_right} />
+                                </div>
+                                <div
+                                  className="accordian-header"
+                                  style={{
+                                    display: "flex",
+                                    cursor: "pointer",
+                                  }}
+                                >
+                                  <div
+                                    className="accordian-header-title"
+                                    style={{
+                                      flex: 1,
+                                      color: "#777",
+                                    }}
+                                  >
+                                    Thane
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </Accordion.Collapse>
+                        </div>
+                      </Accordion>
                       <ul>
                         <li>
                           <a
@@ -232,108 +360,86 @@ const ServiceScreen = () => {
                   <div class="col-md-6">
                     <div class="services-post">
                       <h4>Our Process</h4>
-                      <dl class="accordion">
-                        <dt>
-                          <a
-                            onClick={() => setSelectedAccordion(1)}
-                            class={`${
-                              selectedAccordion === 1 ? "active" : ""
-                            } `}
+                      <Accordion defaultActiveKey="0">
+                        <div className="bootstrap-accordian-style">
+                          <ContextAwareToggle
+                            type="accordion-question"
+                            eventKey="0"
                           >
                             01 Planning
-                          </a>
-                        </dt>
-                        <dd
-                          style={{
-                            display: selectedAccordion === 1 ? "block" : "none",
-                          }}
-                        >
-                          Nullam quis risus eget urna mollis ornare vel eu leo.
-                          Vivamus sagittis lacus vel augue laoreet rutrum
-                          faucibus dolor auctor. Nullam id dolor id nibh
-                          ultricies vehicula.
-                        </dd>
-                        <dt>
-                          <a
-                            onClick={() => setSelectedAccordion(2)}
-                            class={`${selectedAccordion === 2 ? "active" : ""}`}
+                          </ContextAwareToggle>
+                          <Accordion.Collapse eventKey="0">
+                            <div
+                              className="accordion-content"
+                              style={{ background: "transparent" }}
+                            >
+                              Nullam quis risus eget urna mollis ornare vel eu
+                              leo. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor. Nullam id dolor id
+                              nibh ultricies vehicula.
+                            </div>
+                          </Accordion.Collapse>
+                        </div>
+                        <div className="bootstrap-accordian-style">
+                          <ContextAwareToggle
+                            type="accordion-question"
+                            eventKey="1"
                           >
                             02 Design
-                          </a>
-                        </dt>
-                        <dd
-                          style={{
-                            display: selectedAccordion === 2 ? "block" : "none",
-                          }}
-                        >
-                          Nullam quis risus eget urna mollis ornare vel eu leo.
-                          Vivamus sagittis lacus vel augue laoreet rutrum
-                          faucibus dolor auctor. Nullam id dolor id nibh
-                          ultricies vehicula.
-                        </dd>
-                        <dt>
-                          <a
-                            onClick={() => setSelectedAccordion(3)}
-                            class={`${
-                              selectedAccordion === 3 ? "active" : ""
-                            } `}
+                          </ContextAwareToggle>
+                          <Accordion.Collapse eventKey="1">
+                            <div
+                              className="accordion-content"
+                              style={{ background: "transparent" }}
+                            >
+                              Nullam quis risus eget urna mollis ornare vel eu
+                              leo. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor. Nullam id dolor id
+                              nibh ultricies vehicula.
+                            </div>
+                          </Accordion.Collapse>
+                        </div>
+                        <div className="bootstrap-accordian-style">
+                          <ContextAwareToggle
+                            type="accordion-question"
+                            eventKey="2"
                           >
                             03 Building
-                          </a>
-                        </dt>
-                        <dd
-                          style={{
-                            display: selectedAccordion === 3 ? "block" : "none",
-                          }}
-                        >
-                          Nullam quis risus eget urna mollis ornare vel eu leo.
-                          Vivamus sagittis lacus vel augue laoreet rutrum
-                          faucibus dolor auctor. Nullam id dolor id nibh
-                          ultricies vehicula.
-                        </dd>
-                        <dt>
-                          <a
-                            onClick={() => setSelectedAccordion(4)}
-                            class={`${
-                              selectedAccordion === 4 ? "active" : ""
-                            } `}
+                          </ContextAwareToggle>
+                          <Accordion.Collapse
+                            type="accordion-question"
+                            eventKey="2"
                           >
-                            04 Testing
-                          </a>
-                        </dt>
-                        <dd
-                          style={{
-                            display: selectedAccordion === 4 ? "block" : "none",
-                          }}
-                        >
-                          Nullam quis risus eget urna mollis ornare vel eu leo.
-                          Vivamus sagittis lacus vel augue laoreet rutrum
-                          faucibus dolor auctor. Nullam id dolor id nibh
-                          ultricies vehicula.
-                        </dd>
-                      </dl>
-
-                      <Accordion defaultActiveKey="0">
-                        <Card>
-                          <Card.Header>
-                            <ContextAwareToggle eventKey="0">
-                              Click me!
-                            </ContextAwareToggle>
-                          </Card.Header>
-                          <Accordion.Collapse eventKey="0">
-                            <Card.Body>Hello! I'm the body</Card.Body>
+                            <div
+                              className="accordion-content"
+                              style={{ background: "transparent" }}
+                            >
+                              Nullam quis risus eget urna mollis ornare vel eu
+                              leo. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor. Nullam id dolor id
+                              nibh ultricies vehicula.
+                            </div>
                           </Accordion.Collapse>
-                        </Card>
-                        <Card>
-                          <Card.Header>
-                            <ContextAwareToggle eventKey="1">
-                              Click me!
-                            </ContextAwareToggle>
-                          </Card.Header>
-                          <Accordion.Collapse eventKey="1">
-                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </div>
+                        <div className="bootstrap-accordian-style">
+                          <ContextAwareToggle
+                            type="accordion-question"
+                            eventKey="3"
+                          >
+                            04 Building
+                          </ContextAwareToggle>
+                          <Accordion.Collapse eventKey="3">
+                            <div
+                              className="accordion-content"
+                              style={{ background: "transparent" }}
+                            >
+                              Nullam quis risus eget urna mollis ornare vel eu
+                              leo. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor. Nullam id dolor id
+                              nibh ultricies vehicula.
+                            </div>
                           </Accordion.Collapse>
-                        </Card>
+                        </div>
                       </Accordion>
                     </div>
                   </div>
