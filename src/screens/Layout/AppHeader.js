@@ -82,7 +82,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/"
+                        to="/ideaBook"
                         className={`${navOpen === "ideaBook" ? "active" : ""}`}
                         onClick={() => setNavOpen("ideaBook")}
                       >
@@ -100,7 +100,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/"
+                        to="/carrer"
                         className={`${navOpen === "carrer" ? "active" : ""}`}
                         onClick={() => setNavOpen("carrer")}
                       >

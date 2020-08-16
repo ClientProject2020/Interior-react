@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Suspense } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import MainScreen from "./screens/App";
@@ -10,51 +10,62 @@ import {
   Route,
   BrowserRouter,
 } from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen/HomeScreen";
-import ContactUs from "./screens/ContactUs/ContactUs";
-import Error404 from "./screens/ErrorPages/Error404";
+
 // import "antd/dist/antd.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AboutUs from "./screens/AboutUs/AboutUs";
-import ServiceScreen from "./screens/Services/ServiceScreen";
-import BlogsScreen from "./screens/Blogs/Blogs";
+// import ContactUs from "./screens/ContactUs/ContactUs";
+import Error404 from "./screens/ErrorPages/Error404";
+import AppLoader from "./screens/Layout/AppLoader";
+// import AboutUs from "./screens/AboutUs/AboutUs";
+// import ServiceScreen from "./screens/Services/ServiceScreen";
+// import BlogsScreen from "./screens/Blogs/Blogs";
+
+const HomeScreen = React.lazy(() => import("./screens/HomeScreen/HomeScreen"));
+const AboutUs = React.lazy(() => import("./screens/AboutUs/AboutUs"));
+const ContactUs = React.lazy(() => import("./screens/ContactUs/ContactUs"));
+const BlogsScreen = React.lazy(() => import("./screens/Blogs/Blogs"));
+const ServiceScreen = React.lazy(() =>
+  import("./screens/Services/ServiceScreen")
+);
 
 const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Switch>
-          <Route
-            path={`${process.env.PUBLIC_URL}/ErrorPage`}
-            component={Error404}
-          />
-          <Fragment>
-            <MainScreen>
-              <Route
-                exact
-                path={`${process.env.PUBLIC_URL}/`}
-                component={HomeScreen}
-              />
-              <Route
-                path={`${process.env.PUBLIC_URL}/contact`}
-                component={ContactUs}
-              />
-              <Route
-                path={`${process.env.PUBLIC_URL}/aboutUs`}
-                component={AboutUs}
-              />
-              <Route
-                path={`${process.env.PUBLIC_URL}/service`}
-                component={ServiceScreen}
-              />
-              <Route
-                path={`${process.env.PUBLIC_URL}/blog`}
-                component={BlogsScreen}
-              />
-            </MainScreen>
-          </Fragment>
-        </Switch>
+        <Suspense fallback={<AppLoader />}>
+          <Switch>
+            <Route
+              path={`${process.env.PUBLIC_URL}/ErrorPage`}
+              component={Error404}
+            />
+            <Fragment>
+              <MainScreen>
+                <Route
+                  exact
+                  path={`${process.env.PUBLIC_URL}/`}
+                  component={HomeScreen}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/contact`}
+                  component={ContactUs}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/aboutUs`}
+                  component={AboutUs}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/service`}
+                  component={ServiceScreen}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/blog`}
+                  component={BlogsScreen}
+                />
+              </MainScreen>
+            </Fragment>
+          </Switch>
+        </Suspense>
       </BrowserRouter>
     </Provider>
   );

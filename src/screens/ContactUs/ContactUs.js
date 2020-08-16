@@ -4,9 +4,9 @@ import contactus from "../../assets/images/contact-us.jpg";
 import Submit from "../../assets/icons/submit.png";
 import { ic_location_on } from "react-icons-kit/md/ic_location_on";
 import { Icon } from "react-icons-kit";
-import { clockO } from "react-icons-kit/fa/clockO";
-import { mail } from "react-icons-kit/entypo/mail";
-import { phone } from "react-icons-kit/entypo/phone";
+import {clock} from 'react-icons-kit/ionicons/clock'
+import {email} from 'react-icons-kit/ionicons/email'
+import {iosTelephone} from 'react-icons-kit/ionicons/iosTelephone';
 import { plane } from "react-icons-kit/entypo/plane";
 
 const ContactUs = () => {
@@ -21,7 +21,7 @@ const ContactUs = () => {
           paddingBottom: 85,
         }}
       >
-        {" "}
+       
         <div
           style={{
             color: "white",
@@ -73,7 +73,7 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={clockO}
+                              icon={clock}
                               size={30}
                               style={{
                                 verticalAlign: "middle",
@@ -93,7 +93,7 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={mail}
+                              icon={email}
                               size={30}
                               style={{
                                 verticalAlign: "middle",
@@ -109,7 +109,7 @@ const ContactUs = () => {
                         <span className="ci-icon">
                           <div style={{ color: "white" }}>
                             <Icon
-                              icon={phone}
+                              icon={iosTelephone}
                               size={30}
                               style={{
                                 verticalAlign: "middle",
