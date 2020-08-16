@@ -1,6 +1,10 @@
 import React from "react";
 // import aboutus from "../../../assets/images/blog=-detail.jpg";
 import aboutus from "../../../assets/images/blog-detail.jpg";
+import { Icon } from "react-icons-kit";
+import { heart } from "react-icons-kit/fa/heart";
+import { comment } from "react-icons-kit/fa/comment";
+import { share } from "react-icons-kit/fa/share";
 
 const BlogsDetail = () => {
   return (
@@ -25,18 +29,18 @@ const BlogsDetail = () => {
                       <h3>Interior Design News</h3>
                     </a>
                     <div class="dates">
-                      <span class="date">April 11, 2020 &nbsp;/</span>
-                      <ul class="action-list pl-0">
-                        <li class="action-item pl-2">
-                          <i class="fa fa-heart"></i> <span>306</span>
-                        </li>
-                        <li class="action-item">
-                          <i class="fa fa-comment"></i> <span>34</span>
-                        </li>
-                        <li class="action-item">
-                          <i class="fa fa-share-alt"></i> <span>122</span>
-                        </li>
-                      </ul>
+                      <span class="date">April 11, 2020 &nbsp;</span>
+                      {/* <ul class="action-list pl-0">
+                          <li class="action-item pl-2">
+                            <Icon icon={heart} style={{}} /> <span>306</span>
+                          </li>
+                          <li class="action-item">
+                            <Icon icon={comment} /> <span>34</span>
+                          </li>
+                          <li class="action-item">
+                            <Icon icon={share} /> <span>122</span>
+                          </li>
+                        </ul> */}
                     </div>
                     <div class="news-item-descr big-news details visib mb-0">
                       <p class="mb-3">
