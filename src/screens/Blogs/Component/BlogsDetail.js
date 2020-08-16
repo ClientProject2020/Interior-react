@@ -144,7 +144,7 @@ const BlogsDetail = () => {
                 </ul>
               </div>
             </section>
-            <section class="leve-comments wpb">
+            {/* <section class="leve-comments wpb">
               <h3 class="mb-5">Leave a Comment</h3>
               <div class="row">
                 <div class="col-md-12 data">
@@ -197,7 +197,7 @@ const BlogsDetail = () => {
                   </form>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>
