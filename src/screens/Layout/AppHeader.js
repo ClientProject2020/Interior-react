@@ -7,8 +7,8 @@ const AppHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    var currentUrl = window.location.pathname;
-    setNavOpen(currentUrl);
+    // var currentUrl = window.location.pathname;
+    // setNavOpen(currentUrl);
   }, []);
   return (
     <>
@@ -115,7 +115,7 @@ const AppHeader = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
+                      {/* <Link
                         to="/carrer"
                         className={`${navOpen === "carrer" ? "active" : ""}`}
                         onClick={() => {
@@ -124,7 +124,7 @@ const AppHeader = () => {
                         }}
                       >
                         Carrers
-                      </Link>
+                      </Link> */}
                     </li>
                     <li>
                       <Link

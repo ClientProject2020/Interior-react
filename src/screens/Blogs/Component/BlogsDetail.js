@@ -11,12 +11,15 @@ const BlogsDetail = () => {
     <section className="blog blog-section bg-white list-side">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12 col-md-12 blog-pots">
+          <div className=" blog-pots">
             <div className="row">
               <div className="col-md-12 col-xs-12">
                 <div className="news-item details no-mb2">
                   <a className="news-img-link">
-                    <div className="news-item-img">
+                    <div
+                      className="news-item-img"
+                      // style={{height:'center'}}
+                    >
                       <img
                         className="img-responsive"
                         src={aboutus}
@@ -98,7 +101,10 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div className="row mb-5" style={{ borderBottom: " 1px solid #ececec" }}>
+              <div
+                className="row mb-5"
+                style={{ borderBottom: " 1px solid #ececec" }}
+              >
                 <ul className="col-12 commented">
                   <li className="comm-inf">
                     <div className="col-md-2">
@@ -122,7 +128,10 @@ const BlogsDetail = () => {
                   </li>
                 </ul>
               </div>
-              <div className="row my-4" style={{ borderBottom: " 1px solid #ececec" }}>
+              <div
+                className="row my-4"
+                style={{ borderBottom: " 1px solid #ececec" }}
+              >
                 <ul className="col-12 commented">
                   <li className="comm-inf">
                     <div className="col-md-2">

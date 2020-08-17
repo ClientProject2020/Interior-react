@@ -79,60 +79,95 @@ const Blogs = () => {
         //     </div>
         //   </div>
         // </section>
-        <div className="container">
-          <article
-            class="gallerycontainer"
-            style={{ backgroundColor: "#f5f1f0", cursor: "pointer" }}
-            onClick={() => {
-              setOnDetailSelect("true");
-            }}
-          >
-            <div
-              class="col-md-6 galleryimage projectimage"
-              style={{
-                position: "absolute",
-                zIndex: 0,
-                background: "none",
-              }}
-            >
-              <a href="#"></a>
-              <div
-                class="backstretch"
-                style={{
-                  left: 0,
-                  top: 0,
-                  overflow: "hidden",
-                  margin: 0,
-                  padding: 0,
-                  height: "100%",
-                  width: "100%",
-                  zIndex: -999998,
-                  position: "absolute",
-                  background: `url(${aboutus})`,
-                  backgroundRepeat: "no-repeat",
+        <>
+          <div class="page-heading">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h1
+                    style={{
+                      fontSize: 22,
+                      fontFamily: `'Montserrat',sans-serif`,
+                      fontWeight: "650",
+                      marginBottom: 0,
+                      lineHeight: "34px",
+                    }}
+                  >
+                    Blog
+                  </h1>
+                </div>
+                <div class="col-md-6">
+                  <ul class="bread-crumb">
+                    <li>
+                      <a title="HOME" href="#">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="separate">/</li>
+                    <li>Lorem Ipsum </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section>
+            <div className="container">
+              <article
+                class="gallerycontainer"
+                style={{ backgroundColor: "#f5f1f0", cursor: "pointer" }}
+                onClick={() => {
+                  setOnDetailSelect("true");
                 }}
-              ></div>
-            </div>
-            <div class="col-md-6 gallerycontent">
-              <h4>
-                <a
-                  href="single-project.html"
-                  style={{ color: "#e6c663", fontSize: 24 }}
+              >
+                <div
+                  class="col-md-6 galleryimage projectimage"
+                  style={{
+                    position: "absolute",
+                    zIndex: 0,
+                    background: "none",
+                  }}
                 >
-                  De eram exercitat
-                </a>
-              </h4>
-              <p style={{}}>
-                Id nisi aliquip praetermissum. Cupidatat est esse, noster an
-                quamquam non nulla. Cupidatat ea nostrud, irure nostrud
-                pariatur, fugiat doctrina.
-              </p>
-              <a style={{}} class="readmore-button">
-                View Project
-              </a>
+                  <a href="#"></a>
+                  <div
+                    class="backstretch"
+                    style={{
+                      left: 0,
+                      top: 0,
+                      overflow: "hidden",
+                      margin: 0,
+                      padding: 0,
+                      height: "100%",
+                      width: "100%",
+                      zIndex: -999998,
+                      position: "absolute",
+                      backgroundImage: `url(${aboutus})`,
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  ></div>
+                </div>
+                <div class="col-md-6 gallerycontent">
+                  <h4>
+                    <a
+                      href="single-project.html"
+                      style={{ color: "#e6c663", fontSize: 24 }}
+                    >
+                      De eram exercitat
+                    </a>
+                  </h4>
+                  <p style={{}}>
+                    Id nisi aliquip praetermissum. Cupidatat est esse, noster an
+                    quamquam non nulla. Cupidatat ea nostrud, irure nostrud
+                    pariatur, fugiat doctrina.
+                  </p>
+                  <a style={{}} class="readmore-button">
+                    View Project
+                  </a>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
+          </section>
+        </>
       )}
       {onDetailSelect && <BlogsDetail />}
     </>

@@ -36,6 +36,7 @@ const Portfolio = React.lazy(() =>
 const ServiceScreen = React.lazy(() =>
   import("./screens/Services/ServiceScreen")
 );
+const IdeaBookScreen = React.lazy(() => import("./screens/IdeaBook/IdeaBook"));
 
 const App = () => {
   return (
@@ -73,6 +74,10 @@ const App = () => {
                 <Route
                   path={`${process.env.PUBLIC_URL}/portfolio`}
                   component={Portfolio}
+                />
+                <Route
+                  path={`${process.env.PUBLIC_URL}/ideaBook`}
+                  component={IdeaBookScreen}
                 />
               </MainScreen>
             </Fragment>

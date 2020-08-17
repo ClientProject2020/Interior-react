@@ -1008,6 +1008,12 @@ img {
     border-radius: 0px !important;
   }
 }
-.readmore-button:hover{
+.readmore-button:hover {
   color: #e9c37a !important;
+}
+
+@media (min-width: 1200px) {
+  .blog.blog-section .container {
+    max-width: 991px !important;
+  }
 }
