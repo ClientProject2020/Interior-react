@@ -2,6 +2,24 @@ import React, { useState, useCallback } from "react";
 import Image from "../../assets/images/ideaBook.jpg";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import I1 from "../../assets/images/i-1.jpg";
+import I2 from "../../assets/images/i-2.jpg";
+import I3 from "../../assets/images/i-3.jpg";
+import I4 from "../../assets/images/i-4.jpg";
+import I5 from "../../assets/images/i-5.jpg";
+import I6 from "../../assets/images/i-6.jpg";
+import I7 from "../../assets/images/i-7.jpg";
+import I8 from "../../assets/images/i-8.jpg";
+import I9 from "../../assets/images/i-9.jpg";
+import I10 from "../../assets/images/i-10.jpg";
+import I11 from "../../assets/images/i-11.jpg";
+import I12 from "../../assets/images/i-12.jpg";
+import I13 from "../../assets/images/i-13.jpg";
+import I14 from "../../assets/images/i-14.jpg";
+import I15 from "../../assets/images/i-15.jpg";
+import I16 from "../../assets/images/i-16.jpg";
+import I17 from "../../assets/images/i-17.jpg";
+
 const IdeaBook = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -18,52 +36,91 @@ const IdeaBook = () => {
 
   const photos = [
     {
-      src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+      src: I1,
       width: 4,
-      height: 3
+      height: 3,
     },
     {
-      src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+      src: I2,
       width: 1,
-      height: 1
+      height: 1,
     },
     {
-      src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+      src: I3,
       width: 4,
-      height: 3
+      height: 3,
     },
     {
-      src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+      src: I4,
       width: 3,
-      height: 4
+      height: 4,
     },
     {
-      src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-      width: 4,
-      height: 3
+      src: I5,
+      width: 1,
+      height: 1,
     },
     {
-      src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+      src: I6,
       width: 4,
-      height: 3
-    }
+      height: 3,
+    },
+    {
+      src: I7,
+      width: 6,
+      height: 4,
+    },
+    {
+      src: I8,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: I9,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: I10,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: I11,
+      width: 1,
+      height:1,
+    },
+    {
+      src: I12,
+      width: 1,
+      height: 3,
+    },
+    {
+      src: I13,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: I14,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: I15,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: I16,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: I17,
+      width: 1,
+      height: 1,
+    },
   ];
-  
 
   return (
     <>
@@ -91,7 +148,7 @@ const IdeaBook = () => {
                   </a>
                 </li>
                 <li class="separate">/</li>
-                <li>Lorem Ipsum </li>
+                <li>Idea Book</li>
               </ul>
             </div>
           </div>
