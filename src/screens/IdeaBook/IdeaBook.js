@@ -92,7 +92,7 @@ const IdeaBook = () => {
     },
     {
       src: I12,
-      width: 1,
+      width: 4,
       height: 3,
     },
     {
