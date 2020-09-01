@@ -6,21 +6,23 @@ const AboutUs = () => {
       <div class="container">
         <div class="row about-us-section">
           <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
-            <h2 class="mb-20">Yosomite Interior Design</h2>
+            <h2 class="mb-20">Azure Homes And Consultants</h2>
             <h5
               class="mb-20 t-uppercase color-theme"
               style={{ color: "#bb9725" }}
             >
-              20 YEARS OF EXPERIENCE
+              20+ YEARS OF EXPERIENCE
             </h5>
             <p class="mb-20 color-mid">
-              Yosomite is more than just an interior design company, we 19re a
-              collection of artists and architects with a shared philosophy of
-              emphasizing the simple and the delicate. We manipulate forms and
-              combinations from our everyday world to create an aesthetic,
-              practical, and sustainable atmosphere that transforms a simple
-              building or space into a place of happiness for you and your
-              guests.
+              At the heart of every organization are it’s culture, workplace
+              practices, and most importantly it’s people. Deluxe Decorators
+              workplace we aim to understand, translate and respond to all
+              elements of a business. Through analyzing the impact of space on
+              your people, technology and business processes we develop a full
+              understanding of the objectives behind our relocation and
+              refurbishment. This information becomes the blueprint for creating
+              intelligent, hardworking solutions to address your business’s
+              ongoing needs.
             </p>
           </div>
         </div>

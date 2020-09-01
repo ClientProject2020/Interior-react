@@ -29,7 +29,7 @@ const HomeScreen = () => {
               textAlign: "center",
             }}
           >
-            Welcome To Atul Interiors And Achitecture
+            Welcome To Azure Homes And Consultants
           </div>
         </Animated>
         <Animated animationIn="zoomIn" isVisible={true}>
@@ -43,7 +43,7 @@ const HomeScreen = () => {
               textAlign: "center",
             }}
           >
-            We are a Team of Excellent Designing and Building of Products
+            Dedicated To Hardwork
           </div>
         </Animated>
         <Animated
@@ -80,9 +80,13 @@ const HomeScreen = () => {
       <section className="block" id="planning">
         <PlaningComponent />
       </section>
-      <section class="secondary blog section-padding" data-scroll-index="5" id="blog">
+      {/* <section
+        class="secondary blog section-padding"
+        data-scroll-index="5"
+        id="blog"
+      >
         <Blog />
-      </section>
+      </section> */}
     </>
   );
 };

@@ -9,18 +9,134 @@ import {
   useAccordionToggle,
   AccordionContext,
 } from "react-bootstrap";
+import Service_Dtl from "./Component/Service_Dtl";
+import aboutus2 from "../../assets/images/aboutus2.jpg";
+import aboutus3 from "../../assets/images/aboutus3.jpg";
+import aboutus4 from "../../assets/images/aboutus4.jpg";
 
 const ServiceScreen = () => {
-  const [selectedAccordion, setSelectedAccordion] = useState(1);
+  const [selectedAccordion, setSelectedAccordion] = useState(
+    "STRUCTURAL REPAIR"
+  );
+
+  const serviceDtl = [
+    {
+      key: 1,
+      Service: "STRUCTURAL REPAIR",
+      Title: "STRUCTURAL REPAIR",
+      content: (
+        <>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </>
+      ),
+      imageChildren: [
+        {
+          key: "i1",
+          image: aboutus2,
+        },
+        {
+          key: "i2",
+          image: aboutus3,
+        },
+      ],
+    },
+    {
+      key: 2,
+      Service: "INTERIOR DESIGN",
+      Title: "Interior Design",
+      content: (
+        <>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </>
+      ),
+      imageChildren: [],
+    },
+    {
+      key: 3,
+      Service: "GENERAL",
+      Title: "Plumbing",
+      content: (
+        <>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </>
+      ),
+      imageChildren: [],
+    },
+    {
+      key: 4,
+      Service: "GENERAL",
+      Title: "Tiling",
+      content: (
+        <>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </>
+      ),
+      imageChildren: [],
+    },
+  ];
 
   const ContextAwareToggle = ({ children, eventKey, callback, type }) => {
     const currentEventKey = useContext(AccordionContext);
-
     const decoratedOnClick = useAccordionToggle(
       eventKey,
       () => callback && callback(eventKey)
     );
-
     const isCurrentEventKey = currentEventKey === eventKey;
 
     return (
@@ -73,7 +189,6 @@ const ServiceScreen = () => {
       </>
     );
   };
-
   return (
     <>
       <div class="page-heading">
@@ -96,11 +211,11 @@ const ServiceScreen = () => {
               <ul class="bread-crumb">
                 <li>
                   <a title="HOME" href="#">
-                    Service
+                    Home
                   </a>
                 </li>
                 <li class="separate">/</li>
-                <li>Lorem Ipsum </li>
+                <li>Services </li>
               </ul>
             </div>
           </div>
@@ -115,12 +230,12 @@ const ServiceScreen = () => {
                   <div class="textwidget">
                     <div class="widget vertical-menu">
                       <Accordion defaultActiveKey="">
-                        <div className="accordian-sidebar">
+                        {/* <div className="accordian-sidebar">
                           <ContextAwareToggle
                             type="accordian-sidebar"
                             eventKey="0"
                           >
-                            Residential
+                            Structural Repairs
                           </ContextAwareToggle>
                           <Accordion.Collapse eventKey="0">
                             <div
@@ -194,32 +309,48 @@ const ServiceScreen = () => {
                               </div>
                             </div>
                           </Accordion.Collapse>
-                        </div>
-                        <div className="accordian-sidebar">
-                          <ContextAwareToggle
-                            type="accordian-sidebar"
-                            eventKey="1"
-                          >
-                            Interior Renovation
-                          </ContextAwareToggle>
-                        </div>
-                        <div className="accordian-sidebar">
+                        </div> */}
+                        <div
+                          className="accordian-sidebar"
+                          onClick={() => {
+                            setSelectedAccordion("STRUCTURAL REPAIR");
+                          }}
+                        >
                           <ContextAwareToggle
                             type="accordian-sidebar"
                             eventKey="2"
                           >
-                            Design and Build
+                            Structural Repairs
                           </ContextAwareToggle>
                         </div>
-                        <div className="accordian-sidebar">
+                        <div
+                          className="accordian-sidebar"
+                          onClick={() => {
+                            setSelectedAccordion("INTERIOR DESIGN");
+                          }}
+                        >
+                          <ContextAwareToggle
+                            type="accordian-sidebar"
+                            eventKey="1"
+                          >
+                            Interior Design
+                          </ContextAwareToggle>
+                        </div>
+
+                        <div
+                          className="accordian-sidebar"
+                          onClick={() => {
+                            setSelectedAccordion("GENERAL");
+                          }}
+                        >
                           <ContextAwareToggle
                             type="accordian-sidebar"
                             eventKey="3"
                           >
-                            Tiling and Painting
+                            General
                           </ContextAwareToggle>
                         </div>
-                        <div className="accordian-sidebar">
+                        {/* <div className="accordian-sidebar">
                           <ContextAwareToggle
                             type="accordian-sidebar"
                             eventKey="4"
@@ -234,7 +365,7 @@ const ServiceScreen = () => {
                           >
                             Household Repair
                           </ContextAwareToggle>
-                        </div>
+                        </div> */}
                       </Accordion>
                       {/* <ul>
                         <li>
@@ -325,166 +456,16 @@ const ServiceScreen = () => {
               </div>
             </div>
             <div class="col-md-9">
-              <div class="services-wrapp">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="services-post">
-                      <img
-                        src="http://shtheme.net/demosd/buildplus/wp-content/themes/buildplus/images/services/single11.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="services-post">
-                      <img
-                        src="http://shtheme.net/demosd/buildplus/wp-content/themes/buildplus/images/services/single12.jpg"
-                        alt="img"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="services-post">
-                  <h4>Service Overview</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <p></p>
-                  <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <p></p>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="services-post">
-                      <h4>Brochures</h4>
-                      <p>
-                        <img
-                          src="http://shtheme.net/demosd/buildplus/wp-content/themes/buildplus/images/services/single3.jpg"
-                          alt="img"
-                        />
-                      </p>
-                      <ul>
-                        <li>
-                          <a href="#" class="button-brochures">
-                            <Icon icon={filePdfO} />
-                            Download.pdf
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="button-brochures">
-                            <Icon icon={filePdfO} />
-                            Download.doc
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="button-brochures">
-                            <Icon icon={filePdfO} />
-                            Download.ppt
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="services-post">
-                      <h4>Our Process</h4>
-                      <Accordion defaultActiveKey="0">
-                        <div className="bootstrap-accordian-style">
-                          <ContextAwareToggle
-                            type="accordion-question"
-                            eventKey="0"
-                          >
-                            01 Planning
-                          </ContextAwareToggle>
-                          <Accordion.Collapse eventKey="0">
-                            <div
-                              className="accordion-content"
-                              style={{ background: "transparent" }}
-                            >
-                              Nullam quis risus eget urna mollis ornare vel eu
-                              leo. Vivamus sagittis lacus vel augue laoreet
-                              rutrum faucibus dolor auctor. Nullam id dolor id
-                              nibh ultricies vehicula.
-                            </div>
-                          </Accordion.Collapse>
-                        </div>
-                        <div className="bootstrap-accordian-style">
-                          <ContextAwareToggle
-                            type="accordion-question"
-                            eventKey="1"
-                          >
-                            02 Design
-                          </ContextAwareToggle>
-                          <Accordion.Collapse eventKey="1">
-                            <div
-                              className="accordion-content"
-                              style={{ background: "transparent" }}
-                            >
-                              Nullam quis risus eget urna mollis ornare vel eu
-                              leo. Vivamus sagittis lacus vel augue laoreet
-                              rutrum faucibus dolor auctor. Nullam id dolor id
-                              nibh ultricies vehicula.
-                            </div>
-                          </Accordion.Collapse>
-                        </div>
-                        <div className="bootstrap-accordian-style">
-                          <ContextAwareToggle
-                            type="accordion-question"
-                            eventKey="2"
-                          >
-                            03 Building
-                          </ContextAwareToggle>
-                          <Accordion.Collapse
-                            type="accordion-question"
-                            eventKey="2"
-                          >
-                            <div
-                              className="accordion-content"
-                              style={{ background: "transparent" }}
-                            >
-                              Nullam quis risus eget urna mollis ornare vel eu
-                              leo. Vivamus sagittis lacus vel augue laoreet
-                              rutrum faucibus dolor auctor. Nullam id dolor id
-                              nibh ultricies vehicula.
-                            </div>
-                          </Accordion.Collapse>
-                        </div>
-                        <div className="bootstrap-accordian-style">
-                          <ContextAwareToggle
-                            type="accordion-question"
-                            eventKey="3"
-                          >
-                            04 Building
-                          </ContextAwareToggle>
-                          <Accordion.Collapse eventKey="3">
-                            <div
-                              className="accordion-content"
-                              style={{ background: "transparent" }}
-                            >
-                              Nullam quis risus eget urna mollis ornare vel eu
-                              leo. Vivamus sagittis lacus vel augue laoreet
-                              rutrum faucibus dolor auctor. Nullam id dolor id
-                              nibh ultricies vehicula.
-                            </div>
-                          </Accordion.Collapse>
-                        </div>
-                      </Accordion>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {serviceDtl
+                .filter((ii) => ii.Service === selectedAccordion)
+                .map((item) => {
+                  return (
+                    <Service_Dtl
+                      selectedAccordion={selectedAccordion}
+                      data={item}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>

@@ -27,11 +27,12 @@ const OurServicesComponent = () => {
               >
                 <span className="icon flaticon-houses"></span>
                 <h6 style={{ fontSize: 18 }} className="mb-20">
-                  Architecture
+                  STRUCTURAL REPAIRS
                 </h6>
                 <p style={{ fontSize: 15 }}>
-                  Cras mollis turpis a ipsum ultes, nec cond imentum ipsum
-                  consequat.
+                  We take repair job/work of structure which include with the
+                  use of various types of polymer, Epoxy, Adhesives De-rusting &
+                  Protection of Steel.
                 </p>
                 <a href="#0" className="active more custom-font mt-30">
                   Read More
@@ -41,7 +42,7 @@ const OurServicesComponent = () => {
 
             <div className="col-lg-4">
               <div
-                className="item-bx bg-img wow fadeInUp"
+                className="item-bx bg-img two wow fadeInUp"
                 data-wow-delay=".5s"
                 // data-background="img/02.jpg"
               >
@@ -50,8 +51,9 @@ const OurServicesComponent = () => {
                   Interior Design
                 </h6>
                 <p style={{ fontSize: 15 }}>
-                  Cras mollis turpis a ipsum ultes, nec cond imentum ipsum
-                  consequat.
+                  Interior design is the art and science of enhancing the
+                  interior of a building to achieve a healthier and more
+                  aesthetically pleasing environment for the people ...
                 </p>
                 <a href="#0" className="active more custom-font mt-30">
                   Read More
@@ -61,17 +63,20 @@ const OurServicesComponent = () => {
 
             <div className="col-lg-4">
               <div
-                className="item-bx bg-img wow fadeInUp"
+                className="item-bx bg-img three wow fadeInUp"
                 data-wow-delay=".7s"
                 // data-background="img/03.jpg"
               >
                 <span className="icon flaticon-interior-design"></span>
                 <h6 style={{ fontSize: 18 }} className="mb-20">
-                  3D Modeling
+                  GENERAL
                 </h6>
                 <p style={{ fontSize: 15 }}>
-                  Cras mollis turpis a ipsum ultes, nec cond imentum ipsum
-                  consequat.
+                  Plaster of Paris / gypsum R.C.C,
+                  <br /> Plastering,
+                  <br /> Brick work, Waterproofing,
+                  <br />
+                  Painting...
                 </p>
                 <a href="#0" className="active more custom-font mt-30">
                   Read More

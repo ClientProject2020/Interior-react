@@ -23,8 +23,8 @@ const AppHeader = () => {
           <div className="container">
             <div id="logo">
               <a href="index.html">
-                <span className="logo-default">Interior</span>
-                <span className="logo-dark">Interior</span>
+                <span className="logo-default">Azure</span>
+                <span className="logo-dark">Azure</span>
               </a>
             </div>
             <div id="mainMenu-trigger" onClick={() => setMenuOpen(!menuOpen)}>

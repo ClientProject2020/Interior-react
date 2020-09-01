@@ -429,8 +429,22 @@ ul {
   position: relative;
   border: 0;
   z-index: 2;
-  background-image: url(../image/01.jpg);
+  background-image: url(../image/service1.jpg);
 }
+
+.services .item-bx.bg-img.two {
+  position: relative;
+  border: 0;
+  z-index: 2;
+  background-image: url(../image/service-interior.jpg) !important;
+}
+.services .item-bx.bg-img.three {
+  position: relative;
+  border: 0;
+  z-index: 2;
+  background-image: url(../image/service2.jpg) !important;
+}
+
 .services .item-bx:hover {
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
