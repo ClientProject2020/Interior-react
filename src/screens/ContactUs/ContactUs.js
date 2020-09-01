@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import contactus from "../../assets/images/contact-us.jpg";
 
 import Submit from "../../assets/icons/submit.png";
@@ -8,8 +8,16 @@ import { clock } from "react-icons-kit/ionicons/clock";
 import { email } from "react-icons-kit/ionicons/email";
 import { iosTelephone } from "react-icons-kit/ionicons/iosTelephone";
 import { plane } from "react-icons-kit/entypo/plane";
+import axios from 'axios';
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    country: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   return (
     <>
       {/* <div
@@ -54,11 +62,11 @@ const ContactUs = () => {
               <ul class="bread-crumb">
                 <li>
                   <a title="HOME" href="#">
-                    Contact Us
+                    Home
                   </a>
                 </li>
                 <li class="separate">/</li>
-                <li>Lorem Ipsum </li>
+                <li> Contact Us</li>
               </ul>
             </div>
           </div>
@@ -176,10 +184,17 @@ const ContactUs = () => {
                                 fontSize: "16px",
                                 borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
                               }}
+                              value={formData.name}
                               type="text"
                               name="name"
                               className="form-control name"
                               placeholder="Daniel"
+                              onChange={(e) => {
+                                setFormData({
+                                  ...formData,
+                                  name: e.target.value,
+                                });
+                              }}
                             />
                           </div>
                         </div>
@@ -193,12 +208,19 @@ const ContactUs = () => {
                                 fontSize: "16px",
                                 borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
                               }}
+                              value={formData.country}
                               className="form-control"
+                              onChange={(e) => {
+                                setFormData({
+                                  ...formData,
+                                  country: e.target.value,
+                                });
+                              }}
                             >
-                              <option>India</option>
-                              <option>Nepal</option>
-                              <option>Banladesh</option>
-                              <option>America</option>
+                              <option value="India">India</option>
+                              <option value="Nepal">Nepal</option>
+                              <option value="Banladesh">Banladesh</option>
+                              <option value="America">America</option>
                             </select>
                           </div>
                         </div>
@@ -213,9 +235,16 @@ const ContactUs = () => {
                                 borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
                               }}
                               type="email"
+                              value={formData.email}
                               name="email"
                               className="form-control email"
                               placeholder="Example@gmail.com"
+                              onChange={(e) => {
+                                setFormData({
+                                  ...formData,
+                                  email: e.target.value,
+                                });
+                              }}
                             />
                           </div>
                         </div>
@@ -233,6 +262,13 @@ const ContactUs = () => {
                               name="name"
                               className="form-control"
                               placeholder="+91 20 7700 0055"
+                              value={formData.phone}
+                              onChange={(e) => {
+                                setFormData({
+                                  ...formData,
+                                  phone: e.target.value,
+                                });
+                              }}
                             />
                           </div>
                         </div>
@@ -248,6 +284,13 @@ const ContactUs = () => {
                               }}
                               className="form-control"
                               placeholder="Hello! I have this question..."
+                              value={formData.message}
+                              onChange={(e) => {
+                                setFormData({
+                                  ...formData,
+                                  message: e.target.value,
+                                });
+                              }}
                             ></textarea>
                           </div>
                         </div>

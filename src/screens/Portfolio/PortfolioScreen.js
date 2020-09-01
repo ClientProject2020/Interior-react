@@ -2,16 +2,117 @@ import React, { useState, useEffect } from "react";
 import Image from "../../assets/images/portfolio.jpg";
 import { Animated } from "react-animated-css";
 import PortfolioDtlScreen from "./Component/PortfolioDtlScreen";
+import aboutus4 from "../../assets/images/aboutus2.jpg";
+import aboutus5 from "../../assets/images/aboutus3.jpg";
+
+import architechture from "../../assets/images/architechture.jpg";
+import architechture1 from "../../assets/images/architechture1.jpg";
+
+import office from "../../assets/images/office.jpg";
+import office1 from "../../assets/images/office1.jpg";
 const PortfolioScreen = () => {
   const [visible, setVisible] = useState(true);
   const [selectedProject, setSelectedProject] = useState("all");
   const [selectedPortfolio, setSelectedPortfolio] = useState();
   const onFilter = (value) => {
     console.log(value);
+    setVisible(false);
     setSelectedProject(value);
-    setVisible(!visible);
+    setVisible(true);
   };
 
+  const portfolio = [
+    {
+      image:
+        "http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/corp2-600x600.jpg",
+      title: "Corporate Office",
+      type: "Architecture",
+      slideImage: [
+        {
+          key: 1,
+          imageSrc: architechture,
+        },
+        {
+          key: 2,
+          imageSrc: architechture1,
+        },
+      ],
+      contentHead:
+        "A multitask profession which creates any land in beautiful creation",
+      content: (
+        <p>
+          Designers think everything done by someone else is awful, and that
+          they could do it better themselves, which explains why I designed my
+          own living room carpet, I suppose. the architect represents neither a
+          Dionysian nor an Apollinian condition: here it is the mighty act of
+          will, the will which moves mountains, the intoxication of the strong
+          will, which demands artistic expression. The most powerful men have
+          always inspired the architects; the architect has always been
+          influenced by power.
+        </p>
+      ),
+    },
+    {
+      image:
+        "http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/int4-600x600.jpg",
+      title: "Corporate Office",
+      type: "Corporate",
+      slideImage: [
+        {
+          key: 1,
+          imageSrc: office,
+        },
+        {
+          key: 2,
+          imageSrc: office1,
+        },
+      ],
+      contentHead:
+        "A multitask profession which creates any land in beautiful creation",
+      content: (
+        <p>
+          Designers think everything done by someone else is awful, and that
+          they could do it better themselves, which explains why I designed my
+          own living room carpet, I suppose. the architect represents neither a
+          Dionysian nor an Apollinian condition: here it is the mighty act of
+          will, the will which moves mountains, the intoxication of the strong
+          will, which demands artistic expression. The most powerful men have
+          always inspired the architects; the architect has always been
+          influenced by power.
+        </p>
+      ),
+    },
+    {
+      image:
+        "http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/rrr-600x600.jpg",
+      title: "Corporate Office",
+      type: "Interior",
+      slideImage: [
+        {
+          key: 1,
+          imageSrc: aboutus4,
+        },
+        {
+          key: 2,
+          imageSrc: aboutus5,
+        },
+      ],
+      contentHead:
+        "A multitask profession which creates any land in beautiful creation",
+      content: (
+        <p>
+          Designers think everything done by someone else is awful, and that
+          they could do it better themselves, which explains why I designed my
+          own living room carpet, I suppose. the architect represents neither a
+          Dionysian nor an Apollinian condition: here it is the mighty act of
+          will, the will which moves mountains, the intoxication of the strong
+          will, which demands artistic expression. The most powerful men have
+          always inspired the architects; the architect has always been
+          influenced by power.
+        </p>
+      ),
+    },
+  ];
   return (
     <>
       {!selectedPortfolio && (
@@ -101,52 +202,74 @@ const PortfolioScreen = () => {
                 <li class={`${selectedProject === "all" ? "active" : ""}`}>
                   <a
                     onClick={() => {
-                      onFilter("all");
+                      {
+                        onFilter("all");
+                      }
                     }}
                     class="portfolio-filter-item"
                   >
                     All
                   </a>
                 </li>
-                <li class={`${selectedProject === "test" ? "active" : ""}`}>
+                <li
+                  class={`${
+                    selectedProject === "Architecture" ? "active" : ""
+                  }`}
+                >
                   <a
-                    onClick={() => onFilter("test")}
+                    onClick={() => {
+                      onFilter("Architecture");
+                    }}
                     class="portfolio-filter-item"
                     data-filter=".portfolio-filter-21"
                   >
                     Architecture
                   </a>
                 </li>
-                <li class={`${selectedProject === "test1" ? "active" : ""}`}>
+                <li
+                  class={`${selectedProject === "Commercial" ? "active" : ""}`}
+                >
                   <a
-                    onClick={() => onFilter("test1")}
+                    onClick={() => {
+                      onFilter("Commercial");
+                    }}
                     class="portfolio-filter-item"
                     data-filter=".portfolio-filter-23"
                   >
                     Commercial
                   </a>
                 </li>
-                <li class={`${selectedProject === "chart" ? "active" : ""}`}>
+                <li
+                  class={`${selectedProject === "Corporate" ? "active" : ""}`}
+                >
                   <a
-                    onClick={() => onFilter("chart")}
+                    onClick={() => {
+                      onFilter("Corporate");
+                    }}
                     class="portfolio-filter-item"
                     data-filter=".portfolio-filter-24"
                   >
                     Corporate
                   </a>
                 </li>
-                <li class={`${selectedProject === "tile" ? "active" : ""}`}>
+                <li class={`${selectedProject === "Interior" ? "active" : ""}`}>
                   <a
-                    onClick={() => onFilter("tile")}
+                    onClick={() => {
+                      onFilter("Interior");
+                    }}
                     class="portfolio-filter-item"
                     data-filter=".portfolio-filter-25"
                   >
                     Interior
                   </a>
                 </li>
-                <li class={`${selectedProject === "tile1" ? "active" : ""}`}>
+                <li
+                  class={`${selectedProject === "Residential" ? "active" : ""}`}
+                >
                   <a
-                    onClick={() => onFilter("tile1")}
+                    onClick={() => {
+                      onFilter("Residential");
+                    }}
                     class="portfolio-filter-item"
                     data-filter=".portfolio-filter-27"
                   >
@@ -156,130 +279,76 @@ const PortfolioScreen = () => {
               </ul>
             </div>
             <div className="row">
-              <Animated
-                animationIn="fadeIn"
-                animationOut="fadeOut"
-                isVisible={visible}
-                className="col-md-4"
-                animationOutDuration="100"
-                style={{ cursor: "pointer" }}
-              >
-                <article
-                  key="c"
-                  id="c"
-                  class="vc-portfolio portfolio-creative portfolio-filter-21 grid-visible chart"
-                  onClick={() => setSelectedPortfolio(true)}
-                >
-                  <div class=" portfolio-wrap" data-css='""'>
-                    <div class="portfolio-img portfolio-overlay-wrap">
-                      <div class="portfolio-overlay text-right overlay-top-right">
-                        <div class="portfolio-title">
-                          <h6>
-                            <a href="http://demo.zozothemes.com/gintol/portfolio/corporate-office/">
-                              Corporate Office
+              {portfolio
+                .filter(
+                  (ii) =>
+                    selectedProject === "all" || ii.type === selectedProject
+                )
+                .map((item) => {
+                  return (
+                    <Animated
+                      key={item.key}
+                      animationIn="fadeIn"
+                      animationOut="fadeOut"
+                      isVisible={visible}
+                      className="col-md-4"
+                      animationOutDuration="100"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <article
+                        key="c"
+                        id="c"
+                        class="vc-portfolio portfolio-creative portfolio-filter-21 grid-visible chart"
+                        onClick={() => {
+                          setSelectedProject(item.type);
+                          setSelectedPortfolio(item);
+                        }}
+                      >
+                        <div class=" portfolio-wrap" data-css='""'>
+                          <div class="portfolio-img portfolio-overlay-wrap">
+                            <div class="portfolio-overlay text-right overlay-top-right">
+                              <div class="portfolio-title">
+                                <h6>
+                                  <a href="#">{item.title}</a>
+                                </h6>
+                              </div>
+                              <div class="portfolio-categories">
+                                <span>{item.type}</span>
+                              </div>
+                            </div>
+                            <a class="image-gallery-link">
+                              <img
+                                //   height="600"
+                                //   width="600"
+                                class="img-fluid cpt-img"
+                                alt={item.title}
+                                src={item.image}
+                              />
                             </a>
-                          </h6>
+                          </div>
                         </div>
-                        <div class="portfolio-categories">
-                          <span>Architecture</span>
-                        </div>
-                      </div>
-                      <a class="image-gallery-link">
-                        <img
-                          //   height="600"
-                          //   width="600"
-                          class="img-fluid cpt-img"
-                          alt="Corporate Office"
-                          src="http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/corp2-600x600.jpg"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </Animated>
-              <Animated
-                animationIn="fadeIn"
-                animationOut="fadeOut"
-                isVisible={visible}
-                className="col-md-4"
-                animationOutDuration="100"
-                style={{ cursor: "pointer" }}
-              >
-                <article
-                  key="c"
-                  id="c"
-                  class=" vc-portfolio portfolio-creative portfolio-filter-21 grid-visible chart"
-                  style={{}}
-                >
-                  <div class=" portfolio-wrap" data-css='""'>
-                    <div class="portfolio-img portfolio-overlay-wrap">
-                      <div class="portfolio-overlay text-right overlay-top-right">
-                        <div class="portfolio-title">
-                          <h6>
-                            <a>Industry Layout</a>
-                          </h6>
-                        </div>
-                        <div class="portfolio-categories">
-                          <span>Commercial Coperate</span>
-                        </div>
-                      </div>
-                      <a class="image-gallery-link">
-                        <img
-                          //   height="600"
-                          //   width="600"
-                          class="img-fluid cpt-img"
-                          alt="Corporate Office"
-                          src="http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/int4-600x600.jpg"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </Animated>
-              <Animated
-                animationIn="fadeIn"
-                animationOut="fadeOut"
-                isVisible={visible}
-                className="col-md-4"
-                animationOutDuration="100"
-                style={{ cursor: "pointer" }}
-              >
-                <article
-                  key="c"
-                  id="c"
-                  class="vc-portfolio portfolio-creative portfolio-filter-21 grid-visible chart"
-                  style={{ cursor: "pointer" }}
-                >
-                  <div class=" portfolio-wrap" data-css='""'>
-                    <div class="portfolio-img portfolio-overlay-wrap">
-                      <div class="portfolio-overlay text-right overlay-top-right">
-                        <div class="portfolio-title">
-                          <h6>
-                            <a>Forest Side Villa</a>
-                          </h6>
-                        </div>
-                        <div class="portfolio-categories">
-                          <span>Residential</span>
-                        </div>
-                      </div>
-                      <a class="image-gallery-link">
-                        <img
-                          //   height="600"
-                          //   width="600"
-                          class="img-fluid cpt-img"
-                          alt="Corporate Office"
-                          src="http://demo.zozothemes.com/gintol/wp-content/uploads/sites/32/2019/01/rrr-600x600.jpg"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </Animated>
+                      </article>
+                    </Animated>
+                  );
+                })}
             </div>
           </section>
         </>
       )}
-      {selectedPortfolio && <PortfolioDtlScreen />}
+      {selectedPortfolio && (
+        <>
+          <PortfolioDtlScreen portfolio={selectedPortfolio} />
+          <div className="container" style={{ textAlign: "end" }}>
+            <button
+              type="button"
+              class="btn"
+              onClick={() => setSelectedPortfolio()}
+            >
+              Back
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 };

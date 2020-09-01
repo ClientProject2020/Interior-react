@@ -102,7 +102,7 @@ const AppHeader = () => {
                         Idea Book
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/blog"
                         className={`${navOpen === "blog" ? "active" : ""}`}
@@ -113,8 +113,8 @@ const AppHeader = () => {
                       >
                         Blog
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li> */}
                       {/* <Link
                         to="/carrer"
                         className={`${navOpen === "carrer" ? "active" : ""}`}
@@ -125,7 +125,7 @@ const AppHeader = () => {
                       >
                         Carrers
                       </Link> */}
-                    </li>
+                    {/* </li> */}
                     <li>
                       <Link
                         to="/contact"

@@ -12,7 +12,14 @@ import {
 import Service_Dtl from "./Component/Service_Dtl";
 import aboutus2 from "../../assets/images/aboutus2.jpg";
 import aboutus3 from "../../assets/images/aboutus3.jpg";
-import aboutus4 from "../../assets/images/aboutus4.jpg";
+import struct_repair from "../../assets/images/struct-repair.jpg";
+import struct_repair1 from "../../assets/images/struct-repair1.jpg";
+
+import plumbing from "../../assets/images/plumbing.jpg";
+import plumbing1 from "../../assets/images/plumbing1.jpg";
+
+import tiling from "../../assets/images/tiling.jpg";
+import tiling1 from "../../assets/images/tiling1.jpg";
 
 const ServiceScreen = () => {
   const [selectedAccordion, setSelectedAccordion] = useState(
@@ -46,11 +53,11 @@ const ServiceScreen = () => {
       imageChildren: [
         {
           key: "i1",
-          image: aboutus2,
+          image: struct_repair,
         },
         {
           key: "i2",
-          image: aboutus3,
+          image: struct_repair1,
         },
       ],
     },
@@ -77,7 +84,16 @@ const ServiceScreen = () => {
           </p>
         </>
       ),
-      imageChildren: [],
+      imageChildren: [
+        {
+          key: "i1",
+          image: aboutus2,
+        },
+        {
+          key: "i2",
+          image: aboutus3,
+        },
+      ],
     },
     {
       key: 3,
@@ -102,7 +118,16 @@ const ServiceScreen = () => {
           </p>
         </>
       ),
-      imageChildren: [],
+      imageChildren: [
+        {
+          key: "i1",
+          image: plumbing,
+        },
+        {
+          key: "i2",
+          image: plumbing1,
+        },
+      ],
     },
     {
       key: 4,
@@ -127,7 +152,16 @@ const ServiceScreen = () => {
           </p>
         </>
       ),
-      imageChildren: [],
+      imageChildren: [
+        {
+          key: "i1",
+          image: tiling,
+        },
+        {
+          key: "i2",
+          image: tiling1,
+        },
+      ],
     },
   ];
 

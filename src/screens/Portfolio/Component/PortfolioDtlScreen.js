@@ -5,24 +5,18 @@ import Contact from "../../../assets/images/contact-us.jpg";
 import { Modal, Button } from "react-bootstrap";
 
 const settings = {
-  dots: true,
+  // dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  infinite: true,
+  arrows: false,
 };
 
 const Modalsettings = {
-  customPaging: function (i) {
-    return (
-      <a>
-        <img
-          style={{ height: 40, width: 60 }}
-          src={`https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80`}
-        />
-      </a>
-    );
-  },
   dots: true,
   dotsClass: "slick-dots slick-thumb",
   infinite: true,
@@ -31,51 +25,36 @@ const Modalsettings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  dots: true,   
+  dots: true,
 };
-const PortfolioDtlScreen = () => {
+const PortfolioDtlScreen = (props) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  {
+    console.log(props.portfolio, "portfolio");
+  }
   return (
     <div>
       <Slider {...settings}>
-        <>
-          <div
-            onClick={() => setShow(true)}
-            style={{
-              height: "60vh",
-              background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          ></div>
-        </>
-        <>
-          <div
-            style={{
-              height: "60vh",
-              background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          ></div>
-        </>
-        <>
-          <div
-            style={{
-              height: "60vh",
-              background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          ></div>
-        </>
+        {props.portfolio.slideImage.map((ii) => {
+          return (
+            <>
+              <div
+                key={ii.imageSrc}
+                onClick={() => setShow(true)}
+                style={{
+                  height: "60vh",
+                  background: `url(${ii.imageSrc})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+            </>
+          );
+        })}
       </Slider>
       <section>
         <div
@@ -93,35 +72,11 @@ const PortfolioDtlScreen = () => {
           >
             <div class="project-detail-containt">
               <div class="row bg-white text-black">
-                <div className="col-sm-7">
-                  <h3>
-                    A multitask profession which creates any land in beautiful
-                    creation
-                  </h3>
-                  <p>
-                    Designers think everything done by someone else is awful,
-                    and that they could do it better themselves, which explains
-                    why I designed my own living room carpet, I suppose. the
-                    architect represents neither a Dionysian nor an Apollinian
-                    condition: here it is the mighty act of will, the will which
-                    moves mountains, the intoxication of the strong will, which
-                    demands artistic expression. The most powerful men have
-                    always inspired the architects; the architect has always
-                    been influenced by power.
-                  </p>
-                  <p>
-                    Designers think everything done by someone else is awful,
-                    and that they could do it better themselves, which explains
-                    why I designed my own living room carpet, I suppose. the
-                    architect represents neither a Dionysian nor an Apollinian
-                    condition: here it is the mighty act of will, the will which
-                    moves mountains, the intoxication of the strong will, which
-                    demands artistic expression. The most powerful men have
-                    always inspired the architects; the architect has always
-                    been influenced by power.
-                  </p>
+                <div className="col-sm-12">
+                  <h3>{props.portfolio.contentHead}</h3>
+                  {props.portfolio.content}
                 </div>
-                <div className="col-sm-5">
+                {/* <div className="col-sm-5">
                   <div class="product-block">
                     <ul>
                       <li>
@@ -172,7 +127,7 @@ const PortfolioDtlScreen = () => {
                       <a href="javascript:void(0);" class="fa fa-instagram"></a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -186,40 +141,23 @@ const PortfolioDtlScreen = () => {
         >
           <Modal.Body style={{ height: "100%" }}>
             <Slider {...Modalsettings}>
-              <>
-                <div
-                  onClick={() => setShow(true)}
-                  style={{
-                    height: "60vh",
-                    background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                ></div>
-              </>
-              <>
-                <div
-                  style={{
-                    height: "60vh",
-                    background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                ></div>
-              </>
-              <>
-                <div
-                  style={{
-                    height: "60vh",
-                    background: `url(https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3967&q=80)`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                ></div>
-              </>
+              {props.portfolio.slideImage.map((ii) => {
+                return (
+                  <>
+                    <div
+                      key={ii.key}
+                      onClick={() => setShow(true)}
+                      style={{
+                        height: "60vh",
+                        background: `url(${ii.imageSrc})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                  </>
+                );
+              })}
             </Slider>
           </Modal.Body>
           <Modal.Footer style={{ border: 0 }}>
