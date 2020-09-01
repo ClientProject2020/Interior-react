@@ -137,11 +137,11 @@ const PortfolioScreen = () => {
                   <ul class="bread-crumb">
                     <li>
                       <a title="HOME" href="#">
-                        Portfolio
+                        Home
                       </a>
                     </li>
                     <li class="separate">/</li>
-                    <li>Lorem Ipsum </li>
+                    <li>Portfolio</li>
                   </ul>
                 </div>
               </div>
