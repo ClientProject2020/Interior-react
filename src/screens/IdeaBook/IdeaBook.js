@@ -88,11 +88,11 @@ const IdeaBook = () => {
     {
       src: I11,
       width: 1,
-      height:1,
+      height: 1,
     },
     {
       src: I12,
-      width: 4,
+      width: 5,
       height: 3,
     },
     {
