@@ -2,31 +2,31 @@
 	Typography
 -----------------------------------------------------------------*/
 a:not(.btn).link {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 a:not(.btn):hover,
 a:not(.btn):focus,
 a:not(.btn):active {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 	Accordion
 -----------------------------------------------------------------*/
 .accordion.accordion-theme .ac-item {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 	Blockquotes
 -----------------------------------------------------------------*/
 .blockquote {
-	border-left: 3px solid #e6c663;
+	border-left: 3px solid #64a9a6;
 }
 
 .blockquote-color {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
@@ -34,8 +34,8 @@ a:not(.btn):active {
 -------------------------------------------------------------------------*/
 a.btn:not([href]):not([tabindex]),
 .btn {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]):hover,
@@ -46,14 +46,14 @@ a.btn:not([href]):not([tabindex]):not(:disabled):not(.disabled).active,
 .btn:focus,
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]).btn-outline,
 .btn.btn-outline {
-	border-color: #e6c663;
-	color: #e6c663;
+	border-color: #64a9a6;
+	color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]).btn-outline:hover,
@@ -64,14 +64,14 @@ a.btn:not([href]):not([tabindex]).btn-outline.active,
 .btn.btn-outline:focus,
 .btn.btn-outline:active,
 .btn.btn-outline.active {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]).btn-primary,
 .btn.btn-primary {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]).btn-primary:hover,
@@ -82,36 +82,36 @@ a.btn:not([href]):not([tabindex]).btn-primary:not(:disabled):not(.disabled).acti
 .btn.btn-primary:focus,
 .btn.btn-primary:not(:disabled):not(.disabled):active,
 .btn.btn-primary:not(:disabled):not(.disabled).active {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-outline:before,
 .btn.btn-icon-holder.btn-outline:before {
-	border-left-color: #e6c663;
+	border-left-color: #64a9a6;
 }
 
 /* ---------------------------------------------------------------------- call-to-action (call to action)
 -------------------------------------------------------------------------*/
 .call-to-action.call-to-action-colored {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 Carousels
 -----------------------------------------------------------------*/
 .carousel .flickity-button:hover {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ---------------------------------------------------------------- Dropcat & Highlight
 -----------------------------------------------------------------*/
 .dropcap.dropcap-colored {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .highlight.highlight-colored {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
@@ -120,89 +120,89 @@ Forms
 .form-control:focus,
 input:focus,
 select:focus {
-	border-color: #e6c663;
+	border-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Headings
 -------------------------------------------------------------------------*/
 .heading-text.heading-section>h2:before {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .heading-creative strong {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Icon Box
 -------------------------------------------------------------------------*/
 .icon-box.effect.dark .icon i:after {
-	box-shado: 0 0 0 3px #e6c663;
+	box-shado: 0 0 0 3px #64a9a6;
 }
 
 .icon-box.effect.dark .icon i:hover,
 .icon-box.effect.dark:hover .icon i {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .text-box.text-box-light:hover {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .feature-box:hover h2,
 .feature-box:hover h3,
 .feature-box:hover h4 {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 Lables & Badgets
 -----------------------------------------------------------------*/
 .badge-primary {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Light Box
 -------------------------------------------------------------------------*/
 .mfp-ajax-holder .mfp-close:hover {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Lists & Bullet Lists
 -------------------------------------------------------------------------*/
 .list-colored li a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .list-legend li span {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .list-icon.list-icon-colored li:before,
 .list-icon.icon-list-colored i {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .list-group-item.active {
-	background-color: #e6c663;
-	border: #e6c663;
+	background-color: #64a9a6;
+	border: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Pagination & Pager
 -------------------------------------------------------------------------*/
 .post-navigation a:hover {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
 	Pricing Table
 -------------------------------------------------------------------------*/
 .pricing-table.colored .plan-header {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------------
@@ -210,19 +210,19 @@ Lables & Badgets
 -------------------------------------------------------------------------*/
 .p-progress-bar,
 .progress-bar {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /*-------------------------------------------------------- Tabs
 ---------------------------------------------------------*/
 .tabs .nav-tabs .nav-link.active {
-	color: #e6c663;
-	border-bottom: 2px solid #e6c663;
+	color: #64a9a6;
+	border-bottom: 2px solid #64a9a6;
 }
 
 .tabs.tabs-vertical .nav-link.active {
-	color: #e6c663;
-	border-right: 2px solid #e6c663;
+	color: #64a9a6;
+	border-right: 2px solid #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -231,25 +231,25 @@ Lables & Badgets
 .datepicker tbody tr>td.day.today.active,
 .datepicker tbody tr>td.day.active,
 .datepicker tbody tr>td.day.selected {
-	background: #e6c663 !important;
+	background: #64a9a6 !important;
 }
 
 .datepicker tbody tr>td.day.today.active:hover,
 .datepicker tbody tr>td.day.active:hover,
 .datepicker tbody tr>td.day.selected:hover {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .datepicker tbody tr>td.day.range.today {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .datepicker tbody tr>td span.month.active {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .datepicker tbody tr>td span.month.active:hover {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .datetimepicker tbody tr>td.day.today,
@@ -269,7 +269,7 @@ Lables & Badgets
 .datetimepicker table tr td span.active:hover.active,
 .datetimepicker table tr td span.active.disabled.active,
 .datetimepicker table tr td span.active.disabled:hover.active {
-	background: #e6c663 !important;
+	background: #64a9a6 !important;
 }
 
 .datetimepicker table tr>td.today:hover,
@@ -292,48 +292,48 @@ Lables & Badgets
 .datetimepicker table tr>td.today:hover[disabled],
 .datetimepicker table tr>td.today.disabled[disabled],
 .datetimepicker table tr>td.today.disabled:hover[disabled] {
-	background: #e6c663 !important;
+	background: #64a9a6 !important;
 }
 
 .daterangepicker .daterangepicker_input .input-mini.active,
 .daterangepicker .daterangepicker_input .input-mini:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker tbody td.today {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .daterangepicker tbody td.active,
 .daterangepicker tbody td.in-range,
 .daterangepicker tbody td.active:hover,
 .daterangepicker tbody td.in-range:hover {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .daterangepicker select.ampmselect.active,
 .daterangepicker select.ampmselect:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker select.hourselect.active,
 .daterangepicker select.hourselect:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker select.minuteselect.active,
 .daterangepicker select.minuteselect:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker select.monthselect.active,
 .daterangepicker select.monthselect:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker select.yearselect.active,
 .daterangepicker select.yearselect:focus {
-	border: 1px solid #e6c663;
+	border: 1px solid #64a9a6;
 }
 
 .daterangepicker .calendar-time i {
@@ -341,8 +341,8 @@ Lables & Badgets
 }
 
 .daterangepicker .ranges li.active {
-	background: #e6c663;
-	border: 1px solid #e6c663;
+	background: #64a9a6;
+	border: 1px solid #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -351,12 +351,12 @@ Lables & Badgets
 .daterangepicker td.active:not(.off),
 .daterangepicker td.active:hover,
 .daterangepicker .active.end-date.in-range {
-	background: #e6c663 !important;
+	background: #64a9a6 !important;
 }
 
 input.daterange:after,
 input.dates:after {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -365,41 +365,41 @@ input.dates:after {
 .bootstrap-switch .bootstrap-switch-on,
 .bootstrap-switch .bootstrap-switch-handle-on,
 .bootstrap-switch .bootstrap-switch-handle-off {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 .p-radio:checked+.p-radio-style:before {
-	border: 1px solid #e6c663;
-	background: #e6c663;
+	border: 1px solid #64a9a6;
+	background: #64a9a6;
 }
 
 .p-checkbox:checked+.p-checkbox-style:before {
-	border: #e6c663;
-	background: #e6c663;
+	border: #64a9a6;
+	background: #64a9a6;
 }
 
 .p-switch>input[type="checkbox"]:checked+.p-switch-style {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 	Ion Range Sliders
 -----------------------------------------------------------------*/
 .irs-bar {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .irs-from,
 .irs-to,
 .irs-single {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 .irs-from:after,
 .irs-to:after,
 .irs-single:after {
-	border-top-color: #e6c663;
+	border-top-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -414,23 +414,23 @@ input.dates:after {
 .post-item .post-video .post-meta-category,
 .post-item .post-audio .post-meta-category,
 .post-item .post-quote-img .post-meta-category {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .post-item .post-quote-img .post-meta-category {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .post-item .post-quote-img .post-meta-category a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .post-item.quote .post-item-wrap {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .post-author a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -438,61 +438,61 @@ input.dates:after {
 -----------------------------------------------------------------*/
 .grid-filter li:hover a,
 .grid-filter li.active a {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .grid-filter.gf-outline li:hover a,
 .grid-filter.gf-outline li.active a {
-	border-color: #e6c663;
-	color: #e6c663;
+	border-color: #64a9a6;
+	color: #64a9a6;
 }
 
 .grid-filter.gf-lines li:hover a,
 .grid-filter.gf-lines li.active a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .grid-filter.gf-lines li:hover a:after,
 .grid-filter.gf-lines li.active a:after {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .grid-filter.gf-classic li:hover a,
 .grid-filter.gf-classic li.active a {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .grid-filter.gf-default li:hover a,
 .grid-filter.gf-default li.active a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /*------------------------------------------------------ Comments
 ------------------------------------------------------*/
 .comments .comment_number span {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .respond-comment span {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /*------------------------------------------------------ Extras
 ------------------------------------------------------*/
 .item-link {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .item-link:hover {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .nav-link {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .background-colored {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -500,30 +500,30 @@ Scroll top
 -----------------------------------------------------------------*/
 #scrollTop:after,
 #scrollTop:before {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .fc-event-primary.fc-event {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 .icon-set-container .row>[class^="col-"] {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .icon-set-container .row>[class^="col-"]:hover {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .icon-set-container .row>[class^="col-"]:hover .icon-holder {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 /* ---------------------------------------------------------------- Forum
 -----------------------------------------------------------------*/
 .forum thead tr>th {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ---------------------------------------------------------------- Header
@@ -536,12 +536,12 @@ Main Menu
 
 #header.header-modern:not(.header-active).header-colored .header-inner,
 #header.header-modern:not(.header-active).header-colored #header-wrap {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #header.header-colored .header-inner,
 #header.header-colored #header-wrap {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #header #mainMenu nav>ul>li.hover-active>a,
@@ -552,7 +552,7 @@ Main Menu
 #header #mainMenu nav>ul>li:hover>span,
 #header #mainMenu nav>ul>li:focus>a,
 #header #mainMenu nav>ul>li:focus>span {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 #header #mainMenu nav>ul>li .dropdown-menu>li>a:focus,
@@ -564,7 +564,7 @@ Main Menu
 #header #mainMenu nav>ul>li .dropdown-menu>li [class*="col-"]>ul>li>a:focus,
 #header #mainMenu nav>ul>li .dropdown-menu>li [class*="col-"]>ul>li>a:hover,
 #header #mainMenu nav>ul>li .dropdown-menu>li [class*="col-"]>ul>li>a:active {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 #header #mainMenu nav>ul>li .dropdown-menu>li.current>a,
@@ -577,65 +577,65 @@ Main Menu
 #header #mainMenu nav>ul>li .dropdown-menu>li:active>span,
 #header #mainMenu nav>ul>li .dropdown-menu>li.hover-active>a,
 #header #mainMenu nav>ul>li .dropdown-menu>li.hover-active>span {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 #header #mainMenu.menu-rounded nav>ul>li.current>a,
 #header #mainMenu.menu-rounded nav>ul>li:hover>a,
 #header #mainMenu.menu-rounded nav>ul>li:focus>a {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #header #mainMenu.menu-outline nav>ul>li.current>a,
 #header #mainMenu.menu-outline nav>ul>li:hover>a,
 #header #mainMenu.menu-outline nav>ul>li:focus>a {
-	color: #e6c663;
-	border-color: #e6c663;
+	color: #64a9a6;
+	border-color: #64a9a6;
 }
 
 #header #mainMenu.menu-lines nav>ul>li.current>a,
 #header #mainMenu.menu-lines nav>ul>li:hover>a,
 #header #mainMenu.menu-lines nav>ul>li:focus>a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 #header #mainMenu.menu-lines nav>ul>li.current>a:after,
 #header #mainMenu.menu-lines nav>ul>li:hover>a:after,
 #header #mainMenu.menu-lines nav>ul>li:focus>a:after {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #header #mainMenu.menu-hover-background nav>ul>li.current,
 #header #mainMenu.menu-hover-background nav>ul>li:hover,
 #header #mainMenu.menu-hover-background nav>ul>li:focus {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #header #shopping-cart>a .shopping-cart-items {
-	background: #e6c663;
+	background: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 Dots Menu
 -----------------------------------------------------------------*/
 #dotsMenu ul li:hover {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #dotsMenu ul li.current {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 #dotsMenu ul li a:hover:before,
 #dotsMenu ul li a.active:before {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /*Menu Dark*/
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li .dropdown-menu>li>a:hover,
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li .dropdown-menu>li>span:hover,
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li .dropdown-menu>li [class*="col-"]>ul>li>a:hover {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li.current>a,
@@ -646,38 +646,38 @@ Dots Menu
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li:focus>span,
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li.hover-active>a,
 #mainMenu.dark:not(.light):not(.menu-rounded) nav>ul>li.hover-active>span {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .page-menu nav>ul>li:hover>a,
 .page-menu nav>ul>li.active>a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .page-menu.menu-rounded nav>ul>li:hover>a,
 .page-menu.menu-rounded nav>ul>li.active>a {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .page-menu.menu-outline nav>ul>li:hover>a,
 .page-menu.menu-outline nav>ul>li.active>a {
-	border-color: #e6c663;
-	color: #e6c663;
+	border-color: #64a9a6;
+	color: #64a9a6;
 }
 
 .page-menu.menu-lines nav>ul>li:hover>a,
 .page-menu.menu-lines nav>ul>li.active>a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .page-menu.menu-lines nav>ul>li:hover>a:after,
 .page-menu.menu-lines nav>ul>li.active>a:after {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 .page-menu.menu-solid nav>ul>li:hover>a,
 .page-menu.menu-solid nav>ul>li.active>a {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 @media (max-width: 991px) {
@@ -696,12 +696,12 @@ Dots Menu
 	.page-menu.menu-creative nav>ul>li.active>a,
 	.page-menu.inverted nav>ul>li:hover>a,
 	.page-menu.inverted nav>ul>li.active>a {
-		color: #e6c663;
+		color: #64a9a6;
 	}
 }
 
 #search .btn-search-close {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -709,14 +709,14 @@ Topbar
 -----------------------------------------------------------------*/
 #topbar.topbar-colored,
 #topbar.topbar-colored.dark {
-	background-color: #e6c663;
+	background-color: #64a9a6;
 }
 
 /* ----------------------------------------------------------------
 Helpers
 -----------------------------------------------------------------*/
 .text-theme {
-	color: #e6c663 !important;
+	color: #64a9a6 !important;
 }
 
 /* ----------------------------------------------------------------
@@ -728,8 +728,8 @@ Portfolio
 .grid-item .portfolio-description a:hover i,
 .grid-item .grid-description a:hover i,
 .grid-item .portfolio-links a:hover i {
-	background-color: #e6c663;
-	border: 1px solid #e6c663;
+	background-color: #64a9a6;
+	border: 1px solid #64a9a6;
 }
 
 /* ----------------------------------------------------------------
@@ -737,13 +737,13 @@ Portfolio
 -----------------------------------------------------------------*/
 .widget-tweeter li a,
 .widget-twitter li a {
-	color: #e6c663;
+	color: #64a9a6;
 }
 
 .tags a:hover,
 .tags a:focus,
 .tags a:active,
 .tags a.active {
-	background-color: #e6c663;
-	border-color: #e6c663;
+	background-color: #64a9a6;
+	border-color: #64a9a6;
 }

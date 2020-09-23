@@ -9,7 +9,7 @@ const AboutUs = () => {
             <h2 class="mb-20">Azure Homes And Consultants</h2>
             <h5
               class="mb-20 t-uppercase color-theme"
-              style={{ color: "#bb9725" }}
+              style={{ color: "#64a9a6" }}
             >
               20+ YEARS OF EXPERIENCE
             </h5>

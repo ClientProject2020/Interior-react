@@ -4,6 +4,7 @@ import { socialFacebook } from "react-icons-kit/ionicons/socialFacebook";
 import { socialTwitter } from "react-icons-kit/ionicons/socialTwitter";
 import { behance } from "react-icons-kit/fa/behance";
 import { pinterest } from "react-icons-kit/entypo/pinterest";
+import { Link } from "react-router-dom";
 
 const AppFooter = () => {
   return (
@@ -128,11 +129,11 @@ const AppFooter = () => {
         <div class="row">
           <div class="col-lg-3">
             <div class="item abot">
-              <div class="logo-footer mb-20">
+              {/* <div class="logo-footer mb-20">
                 <a class="logo">
                   <img src="img/logo-light.png" alt="" />
                 </a>
-              </div>
+              </div> */}
               <p>
                 Our team takes over everything, from an idea and concept
                 development to realization.
@@ -156,7 +157,7 @@ const AppFooter = () => {
           <div class="col-lg-2 offset-lg-1">
             <div class="item usful-links">
               <div class="fothead">
-                <h6>Useful Links</h6>
+                <h6 style={{ marginBottom: 15 }}>Useful Links</h6>
               </div>
               <ul>
                 <li>
@@ -167,13 +168,14 @@ const AppFooter = () => {
                     }}
                   ></i>
                   &nbsp;&nbsp;
-                  <a
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/`}
                     style={{
                       fontFamily: ` 'Montserrat', sans-serif`,
                     }}
                   >
-                    Interior Design
-                  </a>
+                    Home
+                  </Link>
                 </li>
                 <li>
                   <i
@@ -183,13 +185,14 @@ const AppFooter = () => {
                     }}
                   ></i>
                   &nbsp;&nbsp;
-                  <a
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/aboutUs`}
                     style={{
                       fontFamily: ` 'Montserrat', sans-serif`,
                     }}
                   >
-                    Design Agency
-                  </a>
+                    About Us
+                  </Link>
                 </li>
                 <li>
                   <i
@@ -199,13 +202,14 @@ const AppFooter = () => {
                     }}
                   ></i>
                   &nbsp;&nbsp;
-                  <a
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/service`}
                     style={{
                       fontFamily: ` 'Montserrat', sans-serif`,
                     }}
                   >
-                    Mattress Shop
-                  </a>
+                    Services
+                  </Link>
                 </li>
                 <li>
                   <i
@@ -215,18 +219,53 @@ const AppFooter = () => {
                     }}
                   ></i>
                   &nbsp;&nbsp;
-                  <a
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/portfolio`}
+                    style={{
+                      fontFamily: ` 'Montserrat', sans-serif`,
+                    }}
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+                <li>
+                  <i
+                    class="fas fa-chevron-right"
+                    style={{
+                      fontSize: 10,
+                    }}
+                  ></i>
+                  &nbsp;&nbsp;
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/ideaBook`}
+                    style={{
+                      fontFamily: ` 'Montserrat', sans-serif`,
+                    }}
+                  >
+                    Idea Book
+                  </Link>
+                </li>
+                <li>
+                  <i
+                    class="fas fa-chevron-right"
+                    style={{
+                      fontSize: 10,
+                    }}
+                  ></i>
+                  &nbsp;&nbsp;
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/contact`}
                     style={{
                       fontFamily: ` 'Montserrat', sans-serif`,
                     }}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-2">
+          {/* <div class="col-lg-2">
             <div class="item fotcont">
               <div class="fothead">
                 <h6>Call</h6>
@@ -234,14 +273,21 @@ const AppFooter = () => {
               <p>+7(111)123456789</p>
               <p>+1(000)987654321</p>
             </div>
-          </div>
-          <div class="col-lg-2">
+          </div> */}
+          <div class="col-lg-4">
             <div class="item fotcont">
               <div class="fothead">
-                <h6>Write</h6>
+                <h6 style={{ marginBottom: 15 }}>Write</h6>
               </div>
-              <p>contact@Archo.com</p>
-              <p>Username@website.com</p>
+              <p>azurehomesandconsultants@gmail.com</p>
+              {/* <p>Username@website.com</p> */}
+            </div>
+            <div class="item fotcont">
+              <div class="fothead">
+                <h6 style={{ marginBottom: 15 }}>Call</h6>
+              </div>
+              <p>+91 90045 14488</p>
+              {/* <p>+91 771893</p> */}
             </div>
           </div>
           <div class="col-lg-2">
@@ -250,7 +296,8 @@ const AppFooter = () => {
                 <h6>Visit</h6>
               </div>
               <p>
-                B17 Princess Road, London, Greater London NW18JR, United Kingdom
+                Shop-2,Near BalajiHardware, WaliRoad, Dhumai Nagar, Vasai East
+                401208
               </p>
             </div>
           </div>
@@ -262,14 +309,17 @@ const AppFooter = () => {
             <div class="col-lg-8">
               <div class="text-left">
                 <p>
-                  © 2020, by Lorem Ipsum ans lor lump{" "}
-                  <a href="https://themeforest.net/user/ui-themez">simpLo</a>.
+                  © 2020, by{" "}
+                  <a href="https://azurehomesandconsultants.com/">
+                    Azure Homes And Consultants
+                  </a>
+                  .
                 </p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="text-right">
-                <p>All right reserved.</p>
+                <p>Made with ❤️.</p>
               </div>
             </div>
           </div>

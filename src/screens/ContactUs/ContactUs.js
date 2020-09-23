@@ -1,22 +1,26 @@
-import React, { useState } from "react";
-import contactus from "../../assets/images/contact-us.jpg";
-
-import Submit from "../../assets/icons/submit.png";
-import { ic_location_on } from "react-icons-kit/md/ic_location_on";
+import React, { useState, useEffect } from "react";
 import { Icon } from "react-icons-kit";
-import { clock } from "react-icons-kit/ionicons/clock";
-import { email } from "react-icons-kit/ionicons/email";
-import { iosTelephone } from "react-icons-kit/ionicons/iosTelephone";
 import { plane } from "react-icons-kit/entypo/plane";
-import axios from 'axios';
+import axios from "../../axios";
+import { Spinner, Alert } from "react-bootstrap";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
-    country: "",
+    subject: "",
     email: "",
     phone: "",
     message: "",
+  });
+
+  const [isLoading, setisLoading] = useState(false);
+
+  const [response, setResponse] = useState();
+  const [showError, setShowError] = useState({
+    name: false,
+    email: false,
+    subject: false,
+    phone: false,
   });
   return (
     <>
@@ -170,14 +174,34 @@ const ContactUs = () => {
                           className="col-sm-12"
                           style={{ margin: "7px 0px" }}
                         >
+                          {response && (
+                            <Alert variant={response}>
+                              <div style={{ color: "#fff" }}>
+                                {response === "success"
+                                  ? "We will contact you soon"
+                                  : "There was a problem faced please try again later"}
+                              </div>
+                            </Alert>
+                          )}
+                        </div>
+                        <div
+                          className="col-sm-12"
+                          style={{ margin: "7px 0px" }}
+                        >
                           <h3>
                             Please fill in the form to get in touch with us:
                           </h3>
                         </div>
                         <div className="col-sm-6">
                           <div className="form-group">
-                            <label>Name</label>
+                            <label>
+                              Name{" "}
+                              <span style={{ color: "red", fontSize: 16 }}>
+                                *
+                              </span>
+                            </label>
                             <input
+                              required={true}
                               style={{
                                 border: 0,
                                 backgroundColor: "transparent",
@@ -190,43 +214,70 @@ const ContactUs = () => {
                               className="form-control name"
                               placeholder="Daniel"
                               onChange={(e) => {
+                                if (e.target.value !== "") {
+                                  setShowError({ ...showError, name: false });
+                                }
                                 setFormData({
                                   ...formData,
                                   name: e.target.value,
                                 });
                               }}
                             />
+                            {showError.name && (
+                              <div style={{ color: "red" }}>
+                                This field is required.{" "}
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="col-sm-6">
                           <div className="form-group">
-                            <label>What city are you from?</label>
-                            <select
+                            <label>
+                              Subject{" "}
+                              <span style={{ color: "red", fontSize: 16 }}>
+                                *
+                              </span>
+                            </label>
+                            <input
                               style={{
                                 border: 0,
                                 backgroundColor: "transparent",
                                 fontSize: "16px",
                                 borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
                               }}
-                              value={formData.country}
+                              type="subject"
+                              value={formData.subject}
+                              name="subject"
                               className="form-control"
+                              placeholder="Enter Your Subject"
                               onChange={(e) => {
+                                if (e.target.value !== "") {
+                                  setShowError({
+                                    ...showError,
+                                    subject: false,
+                                  });
+                                }
                                 setFormData({
                                   ...formData,
-                                  country: e.target.value,
+                                  subject: e.target.value,
                                 });
                               }}
-                            >
-                              <option value="India">India</option>
-                              <option value="Nepal">Nepal</option>
-                              <option value="Banladesh">Banladesh</option>
-                              <option value="America">America</option>
-                            </select>
+                            />
+                            {showError.subject && (
+                              <div style={{ color: "red" }}>
+                                This field is required.{" "}
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="col-sm-6">
                           <div className="form-group">
-                            <label>E-mail</label>
+                            <label>
+                              E-mail{" "}
+                              <span style={{ color: "red", fontSize: 16 }}>
+                                *
+                              </span>
+                            </label>
                             <input
                               style={{
                                 border: 0,
@@ -237,21 +288,39 @@ const ContactUs = () => {
                               type="email"
                               value={formData.email}
                               name="email"
+                              required={true}
                               className="form-control email"
                               placeholder="Example@gmail.com"
                               onChange={(e) => {
+                                if (e.target.value !== "") {
+                                  setShowError({
+                                    ...showError,
+                                    email: false,
+                                  });
+                                }
                                 setFormData({
                                   ...formData,
                                   email: e.target.value,
                                 });
                               }}
                             />
+                            {showError.email && (
+                              <div style={{ color: "red" }}>
+                                This field is required.{" "}
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="col-sm-6">
                           <div className="form-group">
-                            <label>Phone Number</label>
+                            <label>
+                              Phone Number{" "}
+                              <span style={{ color: "red", fontSize: 16 }}>
+                                *
+                              </span>
+                            </label>
                             <input
+                              required={true}
                               style={{
                                 border: 0,
                                 backgroundColor: "transparent",
@@ -264,12 +333,23 @@ const ContactUs = () => {
                               placeholder="+91 20 7700 0055"
                               value={formData.phone}
                               onChange={(e) => {
+                                if (e.target.value !== "") {
+                                  setShowError({
+                                    ...showError,
+                                    phone: false,
+                                  });
+                                }
                                 setFormData({
                                   ...formData,
                                   phone: e.target.value,
                                 });
                               }}
                             />
+                            {showError.phone && (
+                              <div style={{ color: "red" }}>
+                                This field is required.{" "}
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="col-sm-10">
@@ -296,19 +376,59 @@ const ContactUs = () => {
                         </div>
                         <div className="col-sm-2">
                           <div className="form-submit">
-                            <button type="button" id="submit">
+                            <button
+                              type="button"
+                              id="submit"
+                              onClick={() => {
+                                console.log(formData);
+
+                                if (
+                                  formData.email !== "" &&
+                                  formData.name !== "" &&
+                                  formData.subject !== "" &&
+                                  formData.phone !== ""
+                                ) {
+                                  setisLoading(true);
+                                  axios
+                                    .post("/mail/sendMail", formData)
+                                    .then((data) => {
+                                      setTimeout(() => {
+                                        setResponse("success");
+                                        setisLoading(false);
+                                      }, 1500);
+                                      console.log("data", data);
+                                    })
+                                    .catch((err) => {
+                                      setResponse("danger");
+                                      setisLoading(false);
+                                    });
+                                } else {
+                                  setShowError({
+                                    name: formData.name !== "" ? false : true,
+                                    email: formData.email !== "" ? false : true,
+                                    subject:
+                                      formData.subject !== "" ? false : true,
+                                    phone: formData.phone !== "" ? false : true,
+                                  });
+                                }
+                              }}
+                            >
                               <div
                                 style={{ borderRadius: "100%", color: "white" }}
                               >
-                                <Icon
-                                  icon={plane}
-                                  size={30}
-                                  style={{
-                                    verticalAlign: "middle",
-                                    height: "auto",
-                                    display: "inline-block",
-                                  }}
-                                />
+                                {isLoading ? (
+                                  <Spinner animation="border" />
+                                ) : (
+                                  <Icon
+                                    icon={plane}
+                                    size={30}
+                                    style={{
+                                      verticalAlign: "middle",
+                                      height: "auto",
+                                      display: "inline-block",
+                                    }}
+                                  />
+                                )}
                               </div>
                             </button>
                           </div>

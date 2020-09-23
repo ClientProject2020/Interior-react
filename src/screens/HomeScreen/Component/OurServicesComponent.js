@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OurServicesComponent = () => {
   return (
@@ -34,9 +35,12 @@ const OurServicesComponent = () => {
                   use of various types of polymer, Epoxy, Adhesives De-rusting &
                   Protection of Steel.
                 </p>
-                <a href="#0" className="active more custom-font mt-30">
+                <Link
+                  to={`${process.env.PUBLIC_URL}/service`}
+                  className="active more custom-font mt-30"
+                >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -55,9 +59,12 @@ const OurServicesComponent = () => {
                   interior of a building to achieve a healthier and more
                   aesthetically pleasing environment for the people ...
                 </p>
-                <a href="#0" className="active more custom-font mt-30">
+                <Link
+                  to={`${process.env.PUBLIC_URL}/service`}
+                  className="active more custom-font mt-30"
+                >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -78,9 +85,12 @@ const OurServicesComponent = () => {
                   <br />
                   Painting...
                 </p>
-                <a href="#0" className="active more custom-font mt-30">
+                <Link
+                  to={`${process.env.PUBLIC_URL}/service`}
+                  className="active more custom-font mt-30"
+                >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

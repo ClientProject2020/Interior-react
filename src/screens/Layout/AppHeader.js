@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import Logo from "../../assets/images/logo.png";
 const AppHeader = () => {
   const [navOpen, setNavOpen] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,9 +22,10 @@ const AppHeader = () => {
         >
           <div className="container">
             <div id="logo">
-              <a href="index.html">
-                <span className="logo-default">Azure</span>
-                <span className="logo-dark">Azure</span>
+              <a href="https://azurehomesandconsultants.com/">
+                
+                <span className="logo-default"><img src={Logo} /></span>
+                {/* <span className="logo-dark">Azure</span> */}
               </a>
             </div>
             <div id="mainMenu-trigger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -56,7 +57,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/aboutUs"
+                        to={`${process.env.PUBLIC_URL}/aboutUs`}
                         className={`${navOpen === "about" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("about");
@@ -68,7 +69,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/service"
+                        to={`${process.env.PUBLIC_URL}/service`}
                         className={`${navOpen === "service" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("service");
@@ -80,7 +81,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/portfolio"
+                        to={`${process.env.PUBLIC_URL}/portfolio`}
                         className={`${navOpen === "portfolio" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("portfolio");
@@ -92,7 +93,7 @@ const AppHeader = () => {
                     </li>
                     <li>
                       <Link
-                        to="/ideaBook"
+                        to={`${process.env.PUBLIC_URL}/ideaBook`}
                         className={`${navOpen === "ideaBook" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("ideaBook");
@@ -115,7 +116,7 @@ const AppHeader = () => {
                       </Link>
                     </li> */}
                     {/* <li> */}
-                      {/* <Link
+                    {/* <Link
                         to="/carrer"
                         className={`${navOpen === "carrer" ? "active" : ""}`}
                         onClick={() => {
@@ -128,7 +129,7 @@ const AppHeader = () => {
                     {/* </li> */}
                     <li>
                       <Link
-                        to="/contact"
+                        to={`${process.env.PUBLIC_URL}/contact`}
                         className={`${navOpen === "contact" ? "active" : ""}`}
                         onClick={() => {
                           setNavOpen("contact");

@@ -41,7 +41,7 @@ const IdeaBookScreen = React.lazy(() => import("./screens/IdeaBook/IdeaBook"));
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename={"/"}>
         <Suspense fallback={<AppLoader />}>
           <Switch>
             <Route
