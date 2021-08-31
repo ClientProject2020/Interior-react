@@ -11,6 +11,7 @@ import { Icon } from "react-icons-kit";
 import { Link } from "react-router-dom";
 import { chevronUp } from "react-icons-kit/fa/chevronUp";
 import FaqTestimonial from "./Component/FaqTestimonial";
+import { SendMail } from "../../api/nodemailer";
 const HomeScreen = () => {
   const ref = useRef();
   const [formData, setFormData] = useState({
@@ -274,7 +275,13 @@ const HomeScreen = () => {
                   id="submit"
                   onClick={() => {
                     console.log(formData);
-
+                    var mailData = {
+                      from: formData.email,
+                      subject: formData.subject,
+                      text: formData.message,
+                      // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
+                    };
+                    // SendMail(mailOptions);
                     if (
                       formData.email !== "" &&
                       formData.name !== "" &&
@@ -283,11 +290,18 @@ const HomeScreen = () => {
                     ) {
                       setisLoading(true);
                       axios
-                        .post("/mail/sendMail", formData)
+                        .post("/usermaster/sendEmail", { data: mailData })
                         .then((data) => {
                           setTimeout(() => {
                             setResponse("success");
                             setisLoading(false);
+                            setFormData({
+                              name: "",
+                              subject: "",
+                              email: "",
+                              phone: "",
+                              message: "",
+                            });
                           }, 1500);
                           console.log("data", data);
                         })

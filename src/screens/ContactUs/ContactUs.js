@@ -3,6 +3,7 @@ import { Icon } from "react-icons-kit";
 import { plane } from "react-icons-kit/entypo/plane";
 import axios from "../../axios";
 import { Spinner, Alert } from "react-bootstrap";
+import { SendMail } from "../../api/nodemailer";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,15 @@ const ContactUs = () => {
     subject: false,
     phone: false,
   });
+
+  var mailOptions = {
+    from: "sriyank.siddhartha@gmail.com",
+    to: "smartherd@gmail.com, sriyank@smartherd.com",
+    subject: "Sending Email using Node.js",
+    text: `Hi Smartherd, thank you for your nice Node.js tutorials.
+            I will donate 50$ for this course. Please send me payment options.`,
+    // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
+  };
   return (
     <>
       {/* <div
@@ -380,37 +390,37 @@ const ContactUs = () => {
                               type="button"
                               id="submit"
                               onClick={() => {
-                                console.log(formData);
-
-                                if (
-                                  formData.email !== "" &&
-                                  formData.name !== "" &&
-                                  formData.subject !== "" &&
-                                  formData.phone !== ""
-                                ) {
-                                  setisLoading(true);
-                                  axios
-                                    .post("/mail/sendMail", formData)
-                                    .then((data) => {
-                                      setTimeout(() => {
-                                        setResponse("success");
-                                        setisLoading(false);
-                                      }, 1500);
-                                      console.log("data", data);
-                                    })
-                                    .catch((err) => {
-                                      setResponse("danger");
-                                      setisLoading(false);
-                                    });
-                                } else {
-                                  setShowError({
-                                    name: formData.name !== "" ? false : true,
-                                    email: formData.email !== "" ? false : true,
-                                    subject:
-                                      formData.subject !== "" ? false : true,
-                                    phone: formData.phone !== "" ? false : true,
-                                  });
-                                }
+                                // console.log(formData);s
+                                SendMail(mailOptions);
+                                // if (
+                                //   formData.email !== "" &&
+                                //   formData.name !== "" &&
+                                //   formData.subject !== "" &&
+                                //   formData.phone !== ""
+                                // ) {
+                                //   setisLoading(true);
+                                //   axios
+                                //     .post("/mail/sendMail", formData)
+                                //     .then((data) => {
+                                //       setTimeout(() => {
+                                //         setResponse("success");
+                                //         setisLoading(false);
+                                //       }, 1500);
+                                //       console.log("data", data);
+                                //     })
+                                //     .catch((err) => {
+                                //       setResponse("danger");
+                                //       setisLoading(false);
+                                //     });
+                                // } else {
+                                //   setShowError({
+                                //     name: formData.name !== "" ? false : true,
+                                //     email: formData.email !== "" ? false : true,
+                                //     subject:
+                                //       formData.subject !== "" ? false : true,
+                                //     phone: formData.phone !== "" ? false : true,
+                                //   });
+                                // }
                               }}
                             >
                               <div

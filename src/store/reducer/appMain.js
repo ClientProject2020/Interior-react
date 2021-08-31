@@ -14,7 +14,7 @@ const setDataStart = (state, action) => {
 const setDataSuccess = (state, action) => {
   return updateObject(state, {
     isLoading: false,
-    data: "kafnjkbja",
+    data: "Azure homes and consultants",
   });
 };
 
